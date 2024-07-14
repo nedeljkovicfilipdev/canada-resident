@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'eventbuk';
+    src: url('/src/assets/fonts/odstemplik.otf') format('opentype'),
+         url('/src/assets/fonts/odstemplikBold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
