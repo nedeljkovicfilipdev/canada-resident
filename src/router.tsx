@@ -3,8 +3,18 @@ import ErrorPage from './components/error-page'
 import { getDefaultLayout } from './components/layout'
 import Home from './pages/home'
 import Blog from './pages/blog'
+import Login from './pages/login'
+import { ResidentPanel } from './components/resident-admin/resident-panel'
 
 export const routerObjects: RouteObject[] = [
+  {
+    path: '/panel',
+    Component: ResidentPanel
+  },
+  {
+    path: '/login',
+    Component: Login,
+  },
   {
     path: '/blog',
     Component: Blog,
