@@ -8,7 +8,7 @@ export const Footer = () => {
   const { t } = useTranslation()
 
   return (
-    <section id='contact-us'>
+    <section id="contact-us">
       <div className="bg-dark-blue w-full border-t px-4 py-8 md:px-12">
         <div className="container mx-auto grid grid-cols-1 items-start gap-8 text-black md:grid-cols-3 md:items-center">
           {/* Left Section - Logo and Contact Info */}

@@ -9,7 +9,7 @@ import { ResidentPanel } from './components/resident-admin/resident-panel'
 export const routerObjects: RouteObject[] = [
   {
     path: '/panel',
-    Component: ResidentPanel
+    Component: ResidentPanel,
   },
   {
     path: '/login',

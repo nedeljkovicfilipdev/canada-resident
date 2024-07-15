@@ -12,8 +12,12 @@ export const ResidentPoster = () => {
           <div className="grid items-center gap-6">
             <div className="flex flex-col justify-center space-y-4 text-center">
               <div className="mb-24">
-                <h1 className="mb-6 text-5xl tracking-tighter text-white sm:text-5xl xl:text-6xl drop-shadow-md">{t('headline')}</h1>
-                <h2 className="mb-6 text-3xl tracking-tighter text-white sm:text-2xl xl:text-3xl drop-shadow-md">{t('subHeadline')}</h2>
+                <h1 className="mb-6 text-5xl tracking-tighter text-white drop-shadow-md sm:text-5xl xl:text-6xl">
+                  {t('headline')}
+                </h1>
+                <h2 className="mb-6 text-3xl tracking-tighter text-white drop-shadow-md sm:text-2xl xl:text-3xl">
+                  {t('subHeadline')}
+                </h2>
                 <Button className="gap-3 py-6 text-lg font-semibold" size={'lg'} variant={'secondary'} asChild>
                   <Link to="contact" smooth={true} duration={500} className="cursor-pointer">
                     {t('callToAction')}

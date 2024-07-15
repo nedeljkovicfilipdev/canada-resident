@@ -22,10 +22,7 @@ export function Header(props: IProps) {
 
   return (
     <div className="fixed left-0 top-0 z-50 flex w-full items-center justify-between border bg-slate-50 px-4 py-4 md:px-12">
-      <Link
-        to="/"        
-        className="cursor-pointer font-eventbuk text-xl text-slate-700 hover:text-white dark:text-white"
-      >
+      <Link to="/" className="cursor-pointer font-eventbuk text-xl text-slate-700 hover:text-white dark:text-white">
         RESIDENT
       </Link>
       <div className="flex flex-grow items-center justify-center gap-4">
