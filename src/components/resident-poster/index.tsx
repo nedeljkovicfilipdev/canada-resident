@@ -18,11 +18,14 @@ export const ResidentPoster = () => {
                 <h2 className="mb-6 text-3xl tracking-tighter text-white drop-shadow-md sm:text-2xl xl:text-3xl">
                   {t('subHeadline')}
                 </h2>
-                <Button className="gap-3 py-6 text-lg font-semibold" size={'lg'} variant={'secondary'} asChild>
-                  <Link to="contact" smooth={true} duration={500} className="cursor-pointer">
-                    {t('callToAction')}
-                  </Link>
-                </Button>
+                <Link 
+                  to="contact-us" 
+                  smooth={true} 
+                  duration={500} 
+                  className="cursor-pointer inline-flex items-center gap-3 py-4 px-6 bg-white text-black border-2 border-white rounded-lg shadow-md hover:bg-gray-100 transition-colors duration-300"
+                >
+                  {t('callToAction')}
+                </Link>
               </div>
             </div>
           </div>
