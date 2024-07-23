@@ -1,41 +1,38 @@
-import { createHashRouter, RouteObject } from 'react-router-dom'
-import ErrorPage from './components/error-page'
-import { getDefaultLayout } from './components/layout'
-import Home from './pages/home'
-import Blog from './pages/blog'
-import Login from './pages/login'
-import { ResidentPanel } from './components/resident-admin/resident-panel'
+// router.tsx
+import { createHashRouter, RouteObject } from 'react-router-dom';
+import ErrorPage from './components/error-page';
+import { getDefaultLayout } from './components/layout';
+import Home from './pages/home';
+import Blog from './pages/blog';
+import Login from './pages/login';
+import { ResidentPanel } from './components/resident-admin/resident-panel';
+import ProtectedRoute from './protectedRoute';
 
 export const routerObjects: RouteObject[] = [
   {
     path: '/panel',
-    Component: ResidentPanel,
+    element: <ProtectedRoute element={getDefaultLayout(<ResidentPanel />)} />,
   },
   {
     path: '/login',
-    Component: Login,
+    element: getDefaultLayout(<Login />),
   },
   {
     path: '/blog',
-    Component: Blog,
+    element: getDefaultLayout(<Blog />),
   },
   {
     path: '/',
-    Component: Home,
+    element: getDefaultLayout(<Home />),
   },
-]
+];
 
 export function createRouter(): ReturnType<typeof createHashRouter> {
-  const routeWrappers = routerObjects.map((router) => {
-    const getLayout = getDefaultLayout
-    const Component = router.Component!
-    const page = getLayout(<Component />)
-    return {
-      ...router,
-      element: page,
-      Component: null,
-      ErrorBoundary: ErrorPage,
-    }
-  })
-  return createHashRouter(routeWrappers)
+  return createHashRouter([
+    ...routerObjects,
+    {
+      path: '*',
+      element: getDefaultLayout(<ErrorPage />),
+    },
+  ]);
 }

@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { Button } from '../ui/button'
 import { Link } from 'react-scroll'
-
+//md:clip-path-custom-circle for poster jpg
 export const ResidentPoster = () => {
   const { t } = useTranslation()
 
@@ -12,10 +12,10 @@ export const ResidentPoster = () => {
           <div className="grid items-center gap-6">
             <div className="flex flex-col justify-center space-y-4 text-center">
               <div className="mb-24">
-                <h1 className="mb-6 text-5xl tracking-tighter text-white drop-shadow-md sm:text-5xl xl:text-6xl">
+                <h1 className="mb-6 text-5xl tracking-tighter text-white sm:text-5xl xl:text-7xl">
                   {t('headline')}
                 </h1>
-                <h2 className="mb-6 text-3xl tracking-tighter text-white drop-shadow-md sm:text-2xl xl:text-3xl">
+                <h2 className="mb-6 text-3xl tracking-tighter text-white sm:text-2xl xl:text-4xl">
                   {t('subHeadline')}
                 </h2>
                 <Link 

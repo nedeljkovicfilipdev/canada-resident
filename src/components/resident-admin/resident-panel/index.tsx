@@ -1,29 +1,29 @@
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { useAppDispatch } from 'src/app/hooks';
+import { logout } from 'src/features/auth/authSlice';
 
 const BlogManagement = () => {
   const [posts, setPosts] = useState([
     { id: 1, title: 'First Blog Post' },
     { id: 2, title: 'Second Blog Post' },
-  ])
+  ]);
 
   const handleAddPost = () => {
-    // Logic for adding a new post
-    const newPost = { id: posts.length + 1, title: `New Blog Post ${posts.length + 1}` }
-    setPosts([...posts, newPost])
-  }
+    const newPost = { id: posts.length + 1, title: `New Blog Post ${posts.length + 1}` };
+    setPosts([...posts, newPost]);
+  };
 
   const handleEditPost = (id: number) => {
-    // Logic for editing a post
-    const editedPosts = posts.map((post) => (post.id === id ? { ...post, title: `${post.title} (Edited)` } : post))
-    setPosts(editedPosts)
-  }
+    const editedPosts = posts.map((post) => (post.id === id ? { ...post, title: `${post.title} (Edited)` } : post));
+    setPosts(editedPosts);
+  };
 
   const handleDeletePost = (id: number) => {
-    // Logic for deleting a post
-    const filteredPosts = posts.filter((post) => post.id !== id)
-    setPosts(filteredPosts)
-  }
+    const filteredPosts = posts.filter((post) => post.id !== id);
+    setPosts(filteredPosts);
+  };
 
   return (
     <div className="rounded-lg bg-white p-4 shadow-lg">
@@ -53,23 +53,22 @@ const BlogManagement = () => {
         ))}
       </ul>
     </div>
-  )
-}
+  );
+};
 
 const ChangePassword = () => {
-  const [currentPassword, setCurrentPassword] = useState('')
-  const [newPassword, setNewPassword] = useState('')
-  const [confirmPassword, setConfirmPassword] = useState('')
+  const [currentPassword, setCurrentPassword] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
   const handleChangePassword = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    // Logic for changing the password
+    event.preventDefault();
     if (newPassword === confirmPassword) {
-      alert('Password changed successfully!')
+      alert('Password changed successfully!');
     } else {
-      alert('Passwords do not match!')
+      alert('Passwords do not match!');
     }
-  }
+  };
 
   return (
     <div className="mt-8 rounded-lg bg-white p-4 shadow-lg">
@@ -122,16 +121,36 @@ const ChangePassword = () => {
         </button>
       </form>
     </div>
-  )
-}
+  );
+};
 
 export const ResidentPanel = () => {
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    dispatch(logout())
+      .unwrap()
+      .then(() => {
+        navigate('/login');
+      })
+      .catch((error) => {
+        console.error('Failed to logout:', error);
+      });
+  };
+
   return (
     <section className="container mt-16 py-16">
       <div className="grid gap-8 md:grid-cols-2">
         <BlogManagement />
         <ChangePassword />
       </div>
+      <button
+        onClick={handleLogout}
+        className="mt-8 rounded bg-red-600 px-4 py-2 text-white hover:bg-red-700"
+      >
+        Logout
+      </button>
     </section>
-  )
-}
+  );
+};

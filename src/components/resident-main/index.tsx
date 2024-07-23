@@ -11,17 +11,25 @@ import { ResidentAbout } from '../resident-about'
 import { ResidentServices } from '../resident-services'
 import { ResidentPrograms } from '../resident-programs'
 import { ResidentNetwork } from '../resident-network'
+import axios from 'axios';
 
 export const ResidentMain = () => {
   const { t } = useTranslation()
+
+  useEffect(() => {
+    console.log("RESTRESTREST")
+    axios.get("http://localhost:3000").then(response => {
+      console.log(response)
+    })
+  },[])
 
   return (
     <div className="flex min-h-screen flex-col">
       <ResidentPoster />
       <ResidentStoryline />
       <ResidentAbout />
-      <ResidentPrograms />
       <ResidentServices />
+      <ResidentPrograms />
       <ResidentNetwork />
       {/* <ResidentPortfolio /> */}
     </div>

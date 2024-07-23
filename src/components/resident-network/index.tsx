@@ -45,7 +45,7 @@ const partners: Partner[] = [
 
 export const ResidentNetwork = () => {
   return (
-    <section id="our-network">
+    <section id="our-network" className='container'>
       <div className="mt-[50px] w-full bg-white py-16">
         <h2 className="mb-6 text-3xl font-bold">Network of Partners</h2>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
