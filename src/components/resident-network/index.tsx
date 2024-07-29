@@ -66,3 +66,5 @@ export const ResidentNetwork = () => {
     </section>
   );
 };
+
+export default ResidentNetwork;

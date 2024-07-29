@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 
-export const ResidentAbout: React.FC = () => {
+export const ResidentAbout = () => {
   const { t } = useTranslation()
 
   return (
@@ -53,3 +53,6 @@ export const ResidentAbout: React.FC = () => {
     </section>
   )
 }
+
+
+export default ResidentAbout;

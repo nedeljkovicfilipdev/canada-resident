@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import clsx from 'clsx';
 import { JourneyStart } from './start';
 
-const Card: React.FC<{ title: string, content: string }> = ({ title, content }) => {
+export const Card: React.FC<{ title: string, content: string }> = ({ title, content }) => {
   const [flipped, setFlipped] = useState(false);
 
   return (
@@ -115,3 +115,5 @@ export const ResidentServices = () => {
     </section>
   );
 };
+
+export default ResidentServices;

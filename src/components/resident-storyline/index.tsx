@@ -22,3 +22,5 @@ export const ResidentStoryline = () => {
     </div>
   )
 }
+
+export default ResidentStoryline;

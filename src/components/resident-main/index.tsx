@@ -1,37 +1,44 @@
-import { Rocket, Globe2, Wrench, Zap } from 'lucide-react'
-import { useTranslation } from 'react-i18next'
-import { Button } from '../ui/button'
-import { Link } from 'react-scroll'
-import { useEffect, useState } from 'react'
-import { ResidentPoster } from '../resident-poster'
-import { ResidentStoryline } from '../resident-storyline'
-import { ResidentPortfolio } from '../resident-portfolio'
-import { ResidentRequest } from '../resident-request'
-import { ResidentAbout } from '../resident-about'
-import { ResidentServices } from '../resident-services'
-import { ResidentPrograms } from '../resident-programs'
-import { ResidentNetwork } from '../resident-network'
+import { Rocket, Globe2, Wrench, Zap } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { Button } from '../ui/button';
+import { Link } from 'react-scroll';
+import { useEffect, useState, Suspense, lazy } from 'react';
 import axios from 'axios';
 
-export const ResidentMain = () => {
-  const { t } = useTranslation()
+const ResidentPoster = lazy(() => import('../resident-poster'));
+const ResidentStoryline = lazy(() => import('../resident-storyline'));
+const ResidentAbout = lazy(() => import('../resident-about'));
+const ResidentServices = lazy(() => import('../resident-services'));
+const ResidentPrograms = lazy(() => import('../resident-programs'));
+const ResidentNetwork = lazy(() => import('../resident-network'));
+// const ResidentPortfolio = lazy(() => import('../resident-portfolio'));
 
-  useEffect(() => {
-    console.log("RESTRESTREST")
-    axios.get("http://localhost:3000").then(response => {
-      console.log(response)
-    })
-  },[])
+export const ResidentMain = () => {
+  const { t } = useTranslation();
 
   return (
     <div className="flex min-h-screen flex-col">
-      <ResidentPoster />
-      <ResidentStoryline />
-      <ResidentAbout />
-      <ResidentServices />
-      <ResidentPrograms />
-      <ResidentNetwork />
-      {/* <ResidentPortfolio /> */}
+      <Suspense fallback={<div>Loading...</div>}>
+        <ResidentPoster />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <ResidentStoryline />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <ResidentAbout />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <ResidentServices />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <ResidentPrograms />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <ResidentNetwork />
+      </Suspense>
+      {/* <Suspense fallback={<div>Loading...</div>}>
+        <ResidentPortfolio />
+      </Suspense> */}
     </div>
-  )
-}
+  );
+};

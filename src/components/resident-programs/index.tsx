@@ -8,7 +8,7 @@ interface Program {
   content: string;
 }
 
-export const ResidentPrograms: React.FC = () => {
+export const ResidentPrograms = () => {
   const { t } = useTranslation();
   const [program, setProgram] = useState<Program | null>(null);
 
@@ -94,3 +94,5 @@ export const ResidentPrograms: React.FC = () => {
     </section>
   );
 };
+
+export default ResidentPrograms;

@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Button } from '../ui/button';
 import { Link } from 'react-scroll';
 
-export const ResidentPoster = () => {
+const ResidentPoster = () => {
   const { t } = useTranslation();
 
   return (
@@ -11,7 +11,7 @@ export const ResidentPoster = () => {
         <div className="px-4 md:px-6">
           <div className="grid items-center gap-6">
             <div className="flex flex-col justify-center space-y-4 text-center">
-              <div className="mb-24 bg-customblue bg-opacity-75 p-2 rounded-2xl shadow-lg container"> {/* Add background and padding */}
+              <div className="mb-24 bg-customblue bg-opacity-75 p-2 rounded-2xl shadow-lg container">
                 <h1 className="mb-6 font-bold tracking-tighter text-white sm:text-xl xl:text-5xl">
                   {t('headline')}
                 </h1>
@@ -34,3 +34,5 @@ export const ResidentPoster = () => {
     </section>
   );
 };
+
+export default ResidentPoster;
