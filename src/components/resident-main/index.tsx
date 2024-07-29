@@ -1,9 +1,5 @@
-import { Rocket, Globe2, Wrench, Zap } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { Button } from '../ui/button';
-import { Link } from 'react-scroll';
-import { useEffect, useState, Suspense, lazy } from 'react';
-import axios from 'axios';
+import { Suspense, lazy } from 'react';
 
 const ResidentPoster = lazy(() => import('../resident-poster'));
 const ResidentStoryline = lazy(() => import('../resident-storyline'));

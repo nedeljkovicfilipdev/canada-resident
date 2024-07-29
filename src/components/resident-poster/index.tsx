@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next';
-import { Button } from '../ui/button';
 import { Link } from 'react-scroll';
 
 const ResidentPoster = () => {

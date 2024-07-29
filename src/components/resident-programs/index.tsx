@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { Rocket, Globe2, Wrench } from 'lucide-react'; // Make sure to import your icons correctly
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next'; // If you're using i18next for translations
 
 // Define an interface for the program
