@@ -54,7 +54,110 @@
   "service-3": "Service Example",
   "service-3-desc": "Description Example",
   "success-stories": "Success Stories",
-  "testimonial-1": "Testemonial Example",
-  "testimonial-2": "Testemonial Example",
-  "testimonial-3": "Testemonial Example"
+  "ourPrograms":"OUR PROGRAMS",
+  "close":"Close",
+  "connect-social-network":"Connect with Us on social media",
+  "partnernetwork": "Network of Partners",
+  "partners": {
+    "immigrationProfessionals": {
+      "title": "Immigration Professionals",
+      "description": "Certified immigration experts offering tailored visa and immigration consulting services to help you navigate the complexities of visa applications and achieve successful outcomes."
+    },
+    "recruiters": {
+      "title": "Recruiters",
+      "description": "Specialized recruiters connecting you with employment opportunities abroad, ensuring you find the best job placements to match your skills and career goals."
+    },
+    "businessBrokers": {
+      "title": "Business Brokers",
+      "description": "Experienced business brokers assisting clients with business investments and acquisitions, helping you explore and secure profitable business opportunities internationally."
+    },
+    "governmentAgencies": {
+      "title": "Government Agencies",
+      "description": "Official government agencies providing guidance and support to ensure compliance with immigration regulations, making your visa application process smooth and hassle-free."
+    },
+    "educationalInstitutions": {
+      "title": "Educational Institutions",
+      "description": "Partnered schools and universities offering a wide range of educational pathways and programs for international students, helping you achieve your academic and career aspirations."
+    },
+    "businessIncubators": {
+      "title": "Business Incubators",
+      "description": "Business incubators supporting start-ups and entrepreneurs with resources, mentorship, and guidance, fostering innovation and success in your business ventures."
+    },
+    "communityOrganizations": {
+      "title": "Community Organizations",
+      "description": "Local community organizations dedicated to offering support and integration services to newcomers, helping you settle and thrive in your new environment."
+    }
+  },
+  "programs": {
+    "skilledWorkers": {
+      "title": "Skilled Workers",
+      "content": "Designed for individuals with specific skills and qualifications who can contribute to Canada’s economy. These programs include the Express Entry system and various Provincial Nominee Programs (PNPs). Successful applicants can gain permanent residency based on their skills, work experience, and ability to contribute to the Canadian labor market."
+    },
+    "businessAndEntrepreneurs": {
+      "title": "Business and Entrepreneurs",
+      "content": "These programs cater to individuals looking to invest in or start a business in Canada. Key programs include the Start-Up Visa Program, Self-Employed Program, and Owners-Operators Program. They provide pathways to permanent residency for entrepreneurs, investors, and self-employed individuals who can drive economic growth and create jobs in Canada."
+    },
+    "familySponsorship": {
+      "title": "Family Sponsorship",
+      "content": "Allows Canadian citizens and permanent residents to sponsor their relatives, including spouses, common-law partners, dependent children, parents, and grandparents, to come to Canada as permanent residents. This program focuses on family reunification, ensuring families can stay together and support each other."
+    },
+    "caregivers": {
+      "title": "Caregivers",
+      "content": "Aimed at individuals who provide care for children, elderly persons, or those with medical needs in Canada. Caregivers can apply for permanent residency through pathways designed specifically for those who have gained work experience in Canada while providing essential caregiving services."
+    },
+    "temporary": {
+      "title": "Temporary",
+      "content": "These programs allow individuals to come to Canada for a limited period. They include Temporary Resident Visas (for visitors), Work Permits, and Study Permits. Temporary residents may have the opportunity to transition to permanent residency through various immigration pathways."
+    },
+    "humanitarian": {
+      "title": "Humanitarian",
+      "content": "Programs under this category cater to individuals who do not qualify under other immigration programs but have compelling reasons to seek residency in Canada. This includes applications on humanitarian and compassionate grounds, often considering factors like the best interest of children or individuals facing significant hardship."
+    },
+    "studentsAndGraduates": {
+      "title": "Students and Graduates",
+      "content": "Canada offers pathways for international students to study and eventually settle in Canada. Programs include Student Visas and Study Permits, as well as opportunities for graduates to transition to permanent residency through various immigration pathways."
+    },
+    "refugees": {
+      "title": "Refugees",
+      "content": "Canada provides protection to individuals who have fled their home countries due to persecution, war, or violence. Refugee programs offer pathways to safety and permanent residency for those who meet the criteria for refugee status, ensuring they can rebuild their lives in Canada."
+    }
+  },
+  "journeyStart": {
+    "consultationsTitle": "Consultations",
+    "firstMeetingTitle": "What to Expect in the First Meeting",
+    "firstMeetingPoints": [
+      "Assess your background, qualifications, and immigration goals.",
+      "Discuss suitable immigration programs tailored to your needs.",
+      "Outline the application process, timeline, and requirements.",
+      "Provide answers to your questions about immigration."
+    ],
+    "prepareTitle": "How to Prepare",
+    "preparePoints": [
+      "Your resume or CV.",
+      "Relevant certificates or diplomas.",
+      "Proof of language proficiency (if applicable).",
+      "Personal identification documents.",
+      "Any previous immigration application documents.",
+      "A list of questions or concerns."
+    ],
+    "successStoriesTitle": "Success Stories",
+    "successStories": [
+      {
+        "text": "\"Diverse Visa made my immigration process seamless. Their expertise ensured my Express Entry success.\"",
+        "author": "- John D., Skilled Worker"
+      },
+      {
+        "text": "\"Thanks to Diverse Visa, I successfully launched my business in Canada. Their support was invaluable.\"",
+        "author": "- Maria S., Entrepreneur"
+      },
+      {
+        "text": "\"Diverse Visa helped me secure my Study Permit and guided me towards permanent residency.\"",
+        "author": "- Elena K., Student"
+      },
+      {
+        "text": "\"Diverse Visa reunited us with our family. Their professionalism made all the difference.\"",
+        "author": "- Ahmed and Fatima A., Family Sponsorship"
+      }
+    ]
+  }
 }

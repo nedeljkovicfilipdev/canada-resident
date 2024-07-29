@@ -1,0 +1,139 @@
+{
+  "partnernetwork": "Mreža partnera",
+  "partners": {
+    "immigrationProfessionals": {
+      "title": "Imigracioni stručnjaci",
+      "description": "Sertifikovani imigracioni stručnjaci koji nude prilagođene usluge savjetovanja o vizama i imigraciji kako bi vam pomogli u snalaženju u složenostima podnošenja zahteva za vizu i postizanju uspešnih rezultata."
+    },
+    "recruiters": {
+      "title": "Regruteri",
+      "description": "Specijalizovani regruteri koji vas povezuju sa mogućnostima zapošljavanja u inostranstvu, osiguravajući da pronađete najbolje poslove koji odgovaraju vašim veštinama i karijernim ciljevima."
+    },
+    "businessBrokers": {
+      "title": "Poslovni brokeri",
+      "description": "Iskusni poslovni brokeri koji pomažu klijentima sa investicijama i akvizicijama, pomažući vam da istražite i obezbedite profitabilne poslovne mogućnosti na međunarodnom nivou."
+    },
+    "governmentAgencies": {
+      "title": "Vladine agencije",
+      "description": "Zvanične vladine agencije koje pružaju smernice i podršku kako bi se osigurala usklađenost sa imigracionim propisima, čineći vaš proces podnošenja zahteva za vizu glatkim i bez problema."
+    },
+    "educationalInstitutions": {
+      "title": "Obrazovne ustanove",
+      "description": "Partnerske škole i univerziteti koji nude širok spektar obrazovnih programa za međunarodne studente, pomažući vam da postignete svoje akademske i karijerne ciljeve."
+    },
+    "businessIncubators": {
+      "title": "Poslovni inkubatori",
+      "description": "Poslovni inkubatori koji podržavaju start-upove i preduzetnike resursima, mentorstvom i smernicama, podstičući inovacije i uspeh u vašim poslovnim poduhvatima."
+    },
+    "communityOrganizations": {
+      "title": "Zajedničke organizacije",
+      "description": "Lokalne zajedničke organizacije posvećene pružanju podrške i usluga integracije novopridošlima, pomažući vam da se smestite i napredujete u novom okruženju."
+    }
+  },
+  "programs": {
+    "skilledWorkers": {
+      "title": "Kvalifikovani radnici",
+      "content": "Osmišljeni za pojedince sa specifičnim veštinama i kvalifikacijama koji mogu doprineti ekonomiji Kanade. Ovi programi uključuju Express Entry sistem i različite Provincial Nominee Programs (PNP). Uspešni kandidati mogu dobiti stalni boravak na osnovu svojih veština, radnog iskustva i sposobnosti da doprinesu kanadskom tržištu rada."
+    },
+    "businessAndEntrepreneurs": {
+      "title": "Biznis i preduzetnici",
+      "content": "Ovi programi su namenjeni osobama koje žele da investiraju ili započnu posao u Kanadi. Ključni programi uključuju Start-Up Visa Program, Self-Employed Program i Owners-Operators Program. Oni pružaju puteve do stalnog boravka za preduzetnike, investitore i samozaposlene osobe koje mogu podsticati ekonomski rast i otvarati radna mesta u Kanadi."
+    },
+    "familySponsorship": {
+      "title": "Porodično sponzorstvo",
+      "content": "Omogućava kanadskim građanima i stalnim stanovnicima da sponzorišu svoje rođake, uključujući supružnike, partnere, zavisnu decu, roditelje i bake i deke, da dođu u Kanadu kao stalni stanovnici. Ovaj program se fokusira na porodično ponovno okupljanje, osiguravajući da porodice mogu ostati zajedno i podržavati jedni druge."
+    },
+    "caregivers": {
+      "title": "Negovatelji",
+      "content": "Namenjen pojedincima koji pružaju negu za decu, starije osobe ili one sa medicinskim potrebama u Kanadi. Negovatelji mogu podneti zahtev za stalni boravak putem programa posebno dizajniranih za one koji su stekli radno iskustvo u Kanadi pružajući osnovne usluge nege."
+    },
+    "temporary": {
+      "title": "Privremeni",
+      "content": "Ovi programi omogućavaju pojedincima da dođu u Kanadu na ograničen period. Oni uključuju privremene rezidentske vize (za posetioce), radne dozvole i dozvole za studiranje. Privremeni stanovnici mogu imati priliku da pređu na stalni boravak putem različitih imigracionih puteva."
+    },
+    "humanitarian": {
+      "title": "Humanitarni",
+      "content": "Programi iz ove kategorije namenjeni su pojedincima koji se ne kvalifikuju u okviru drugih imigracionih programa, ali imaju uverljive razloge da traže boravak u Kanadi. Ovo uključuje aplikacije iz humanitarnih i saosećajnih razloga, često uzimajući u obzir faktore kao što su najbolji interes dece ili pojedinaca koji se suočavaju sa značajnim poteškoćama."
+    },
+    "studentsAndGraduates": {
+      "title": "Studenti i diplomci",
+      "content": "Kanada nudi puteve za međunarodne studente da studiraju i eventualno se nastane u Kanadi. Programi uključuju studentske vize i dozvole za studiranje, kao i mogućnosti za diplomce da pređu na stalni boravak putem različitih imigracionih puteva."
+    },
+    "refugees": {
+      "title": "Izbeglice",
+      "content": "Kanada pruža zaštitu osobama koje su napustile svoje domovine zbog progona, rata ili nasilja. Programi za izbeglice nude puteve do sigurnosti i stalnog boravka za one koji ispunjavaju kriterijume za status izbeglice, osiguravajući da mogu obnoviti svoje živote u Kanadi."
+    }
+  },
+  "journeyStart": {
+    "consultationsTitle": "Konsultacije",
+    "firstMeetingTitle": "Šta očekivati na prvom sastanku",
+    "firstMeetingPoints": [
+      "Procena vaše pozadine, kvalifikacija i imigracionih ciljeva.",
+      "Razgovor o odgovarajućim imigracionim programima prilagođenim vašim potrebama.",
+      "Ocrtavanje procesa prijave, vremenskog okvira i zahteva.",
+      "Pružanje odgovora na vaša pitanja o imigraciji."
+    ],
+    "prepareTitle": "Kako se pripremiti",
+    "preparePoints": [
+      "Vaš CV ili biografija.",
+      "Relevantni sertifikati ili diplome.",
+      "Dokaz o poznavanju jezika (ako je primenjivo).",
+      "Lični identifikacioni dokumenti.",
+      "Bilo koji prethodni imigracioni dokumenti.",
+      "Spisak pitanja ili briga."
+    ],
+    "successStoriesTitle": "Priče o uspehu",
+    "successStories": [
+      {
+        "text": "\"Diverse Visa je učinila moj imigracioni proces besprekornim. Njihova stručnost je osigurala moj uspeh u Express Entry.\"",
+        "author": "- Džon D., Kvalifikovani radnik"
+      },
+      {
+        "text": "\"Zahvaljujući Diverse Visa, uspešno sam pokrenula svoj posao u Kanadi. Njihova podrška je bila neprocenjiva.\"",
+        "author": "- Marija S., Preduzetnik"
+      },
+      {
+        "text": "\"Diverse Visa mi je pomogla da dobijem dozvolu za studiranje i usmerila me ka stalnom boravku.\"",
+        "author": "- Elena K., Student"
+      },
+      {
+        "text": "\"Diverse Visa nas je ponovo spojila sa našom porodicom. Njihov profesionalizam je učinio razliku.\"",
+        "author": "- Ahmed i Fatima A., Porodično sponzorstvo"
+      }
+    ]
+  },
+  "headline": "Откройте новый путь с Diverse Visa",
+  "subHeadline": "Соединяем вас с экспертами по иммиграции для беспрепятственного пути",
+  "callToAction": "Начните свое путешествие сегодня",
+  "storyline-title": "Naša priča",
+  "storyline": "U Diverse Visa ostvarujemo vaše snove povezujući vas sa stručnjacima za imigraciju i osnovnim uslugama prilagođenim vašim jedinstvenim potrebama. Naš posvećeni tim i široka mreža partnera, uključujući regrutere, poslovne brokere, obrazovne ustanove i društvene organizacije, osiguravaju besprekidan proces imigracije. Poštujemo najviše standarde poštenja, inovacija, orijentisanosti ka klijentima i izvrsnosti, pomažući vam da započnete novi život, nastavite obrazovanje ili proširite posao. Neka vas Diverse Visa vodi na vašem putovanju ka novim horizontima već danas.",
+  "about-us": "O nama",
+  "diverse-vision": "Vidimo svet u kojem granice ne sprečavaju snove. Naš cilj je da postanemo vodeća agencija za imigraciju, poznata po svom neuporedivom iskustvu i posvećenosti klijentima. Počinjemo sa fokusom na tržište Istočne Evrope i težimo da proširimo naše usluge na Veliku Britaniju, SAD i druge zemlje.",
+  "diverse-story": "U Diverse Visa ostvarujemo vaše snove povezujući vas sa stručnjacima za imigraciju i osnovnim uslugama prilagođenim vašim jedinstvenim potrebama. Naš posvećeni tim i široka mreža partnera, uključujući regrutere, poslovne brokere, obrazovne ustanove i društvene organizacije, osiguravaju besprekidan proces imigracije. Poštujemo najviše standarde poštenja, inovacija, orijentisanosti ka klijentima i izvrsnosti, pomažući vam da započnete novi život, nastavite obrazovanje ili proširite posao. Neka vas Diverse Visa vodi na vašem putovanju ka novim horizontima već danas.",
+  "our-team": "Naš tim",
+  "diverse-team-about": "Naš tim se sastoji od posvećenih agenata, pravnih stručnjaka i poslovnih savetnika koji donose bogato iskustvo i znanje. Svaki član našeg tima posvećen je pružanju personalizovane podrške i smernica, obezbeđujući našim klijentima najviši kvalitet usluge.",
+  "services": "Naše usluge",
+  "immigration-consulting-experts": "Eksperti za imigracione konsultacije",
+  "immigration-consulting-experts-description": "Personalizovani saveti o najboljim imigracionim putanjama.",
+  "recruiters-job-placements": "Postavljanje poslova od strane rekrutera",
+  "recruiters-job-placements-description": "Sveobuhvatna pomoć u pripremi i predaji vaše prijave.",
+  "business-brokers": "Poslovni posrednici",
+  "business-brokers-description": "Podrška u prikupljanju i organizovanju potrebne dokumentacije.",
+  "educational-institutions": "Obrazovne institucije",
+  "educational-institutions-description": "Pomoć u naseljenju u Kanadi, uključujući stanovanje i školu.",
+  "legal-compliance-advisors": "Savjetnici za pravnu usklađenost",
+  "legal-compliance-advisors-description": "Predstavljanje u žalbenim postupcima i pravnim pitanjima.",
+  "holistic-approach": "Holistički pristup",
+  "holistic-approach-text": "U Diverse Visa primenjujemo holistički pristup u podršci imigraciji. Naša opsežna mreža partnera uključuje imigracione stručnjake, rekrute, poslovne posrednike, vladine agencije, obrazovne institucije, poslovne inkubatore i zajednice. Ovo nam omogućava da ponudimo sveobuhvatnu podršku prilagođenu specifičnim potrebama svakog klijenta.",
+  "understanding-unique-journeys": "Razumevanje jedinstvenih putovanja",
+  "understanding-unique-journeys-text": "Razumemo da je svako imigraciono putovanje jedinstveno i ovde smo da pružimo vođenje i podršku potrebnu za što bezbolniji prelazak. Bilo da želite da započnete novi život u Kanadi, nastavite obrazovanje ili proširite posao, Diverse Visa je vaš pouzdan partner na svakom koraku puta.",
+  "ourPrograms":"Naši Programi",
+  "title-header": "DIVERSE VISA",
+  "about-nav": "O NAMA",
+  "services-nav": "USLUGE",
+  "consultations": "KONSULTACIJE",
+  "our-programs-nav": "NAŠI PROGRAMI",
+  "our-network-nav": "NAŠA MREŽA",
+  "contact-nav": "KONTAKT",
+  "blog-nav": "BLOG"
+}

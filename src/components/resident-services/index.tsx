@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import clsx from 'clsx';
-import { JourneyStart } from './start';
 
 export const Card: React.FC<{ title: string, content: string }> = ({ title, content }) => {
   const [flipped, setFlipped] = useState(false);
@@ -110,7 +109,6 @@ export const ResidentServices = () => {
           </div>
         </div>
       </div>
-      <JourneyStart />
     </section>
   );
 };

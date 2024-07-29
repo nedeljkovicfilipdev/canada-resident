@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next'; // If you're using i18next for translations
+import { useTranslation } from 'react-i18next';
 
-// Define an interface for the program
 interface Program {
   title: string;
   content: string;
@@ -11,40 +10,38 @@ export const ResidentPrograms = () => {
   const { t } = useTranslation();
   const [program, setProgram] = useState<Program | null>(null);
 
-
-
   const programs: Program[] = [
     {
-      title: 'Skilled Workers',
-      content: 'Designed for individuals with specific skills and qualifications who can contribute to Canada’s economy. These programs include the Express Entry system and various Provincial Nominee Programs (PNPs). Successful applicants can gain permanent residency based on their skills, work experience, and ability to contribute to the Canadian labor market.'
+      title: t('programs.skilledWorkers.title'),
+      content: t('programs.skilledWorkers.content')
     },
     {
-      title: 'Business and Entrepreneurs',
-      content: 'These programs cater to individuals looking to invest in or start a business in Canada. Key programs include the Start-Up Visa Program, Self-Employed Program, and Owners-Operators Program. They provide pathways to permanent residency for entrepreneurs, investors, and self-employed individuals who can drive economic growth and create jobs in Canada.'
+      title: t('programs.businessAndEntrepreneurs.title'),
+      content: t('programs.businessAndEntrepreneurs.content')
     },
     {
-      title: 'Family Sponsorship',
-      content: 'Allows Canadian citizens and permanent residents to sponsor their relatives, including spouses, common-law partners, dependent children, parents, and grandparents, to come to Canada as permanent residents. This program focuses on family reunification, ensuring families can stay together and support each other.'
+      title: t('programs.familySponsorship.title'),
+      content: t('programs.familySponsorship.content')
     },
     {
-      title: 'Caregivers',
-      content: 'Aimed at individuals who provide care for children, elderly persons, or those with medical needs in Canada. Caregivers can apply for permanent residency through pathways designed specifically for those who have gained work experience in Canada while providing essential caregiving services.'
+      title: t('programs.caregivers.title'),
+      content: t('programs.caregivers.content')
     },
     {
-      title: 'Temporary',
-      content: 'These programs allow individuals to come to Canada for a limited period. They include Temporary Resident Visas (for visitors), Work Permits, and Study Permits. Temporary residents may have the opportunity to transition to permanent residency through various immigration pathways.'
+      title: t('programs.temporary.title'),
+      content: t('programs.temporary.content')
     },
     {
-      title: 'Humanitarian',
-      content: 'Programs under this category cater to individuals who do not qualify under other immigration programs but have compelling reasons to seek residency in Canada. This includes applications on humanitarian and compassionate grounds, often considering factors like the best interest of children or individuals facing significant hardship.'
+      title: t('programs.humanitarian.title'),
+      content: t('programs.humanitarian.content')
     },
     {
-      title: 'Students and Graduates',
-      content: 'Canada offers pathways for international students to study and eventually settle in Canada. Programs include Student Visas and Study Permits, as well as opportunities for graduates to transition to permanent residency through various immigration pathways.'
+      title: t('programs.studentsAndGraduates.title'),
+      content: t('programs.studentsAndGraduates.content')
     },
     {
-      title: 'Refugees',
-      content: 'Canada provides protection to individuals who have fled their home countries due to persecution, war, or violence. Refugee programs offer pathways to safety and permanent residency for those who meet the criteria for refugee status, ensuring they can rebuild their lives in Canada.'
+      title: t('programs.refugees.title'),
+      content: t('programs.refugees.content')
     }
   ];
 
@@ -67,7 +64,7 @@ export const ResidentPrograms = () => {
                     <h3 className="text-center sm:text-lg xl:text-xl text-[#333] font-bold">{prog.title}</h3>
                   </div>
                 ))}
-                <div className="mb-6 tracking-tighter font-bold text-white sm:text-3xl xl:text-5xl">OUR PROGRAMS</div>
+                <div className="mb-6 tracking-tighter font-bold text-white sm:text-3xl xl:text-5xl">{t('ourPrograms')}</div>
               </div>
             </div>
           </div>
@@ -83,7 +80,7 @@ export const ResidentPrograms = () => {
                   onClick={() => setProgram(null)}
                   className="mt-4 px-4 py-2 bg-customblue text-white rounded-md hover:bg-custombluehover tracking-tighter text-xl"
                 >
-                  Close
+                  {t('close')}
                 </button>
               </div>
             </div>
