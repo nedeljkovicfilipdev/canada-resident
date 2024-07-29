@@ -9,29 +9,29 @@ export const Footer = () => {
 
   return (
     <section id="contact-us">
-      <div className="bg-dark-blue w-full border-t px-4 py-8 md:px-12">
-        <div className="container mx-auto grid grid-cols-1 items-start gap-8 text-black md:grid-cols-3 md:items-center">
+      <div className="bg-customblue text-gray-200 w-full border-t px-4 py-8 md:px-12">
+        <div className="container mx-auto grid grid-cols-1 items-start gap-8 md:grid-cols-3 md:items-center">
           {/* Left Section - Logo and Contact Info */}
           <div className="mb-4 flex flex-col items-center md:mb-0 md:items-start">
             <Link
               to="poster"
               smooth={true}
               duration={500}
-              className="cursor-pointer font-eventbuk text-xl text-slate-700 hover:text-white dark:text-white"
+              className="cursor-pointer text-4xl hover:text-white dark:text-white"
             >
-              RESIDENT
+              {t('title-header')}
             </Link>
 
             <div className="mb-2">
               <p>
                 {t('contact-phone')}:{' '}
-                <a href="tel:+381645772908" className="text-blue-500">
+                <a href="tel:+381645772908" className="text-white-500">
                   +381 645772908
                 </a>
               </p>
               <p>
                 {t('contact-email')}:{' '}
-                <a href="mailto:info@example.com" className="text-blue-500">
+                <a href="mailto:info@example.com" className="text-white-500">
                   info@example.com
                 </a>
               </p>
@@ -42,11 +42,11 @@ export const Footer = () => {
           <div className="mb-4 flex flex-col items-center md:mb-0 md:items-center"></div>
 
           {/* Right Section - Form and Social Links */}
-          <div>
+          <div className='bg-white p-6 text-black rounded-2xl'>
             <form className="space-y-4">
               <div className="flex flex-col gap-4 md:flex-row">
                 <div className="flex-1">
-                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-400">
+                  <label htmlFor="firstName" className="block text-sm">
                     {t('First Name')}
                   </label>
                   <input
@@ -57,7 +57,7 @@ export const Footer = () => {
                   />
                 </div>
                 <div className="flex-1">
-                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-400">
+                  <label htmlFor="lastName" className="block text-sm">
                     {t('Last Name')}
                   </label>
                   <input
@@ -69,7 +69,7 @@ export const Footer = () => {
                 </div>
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-400">
+                <label htmlFor="email" className="block text-sm">
                   {t('Email')}
                 </label>
                 <input
@@ -80,7 +80,7 @@ export const Footer = () => {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-400">
+                <label htmlFor="message" className="block text-sm">
                   {t('Message')}
                 </label>
                 <textarea
@@ -91,14 +91,14 @@ export const Footer = () => {
                 ></textarea>
               </div>
               <Button
-                className="w-full bg-customblue py-2 text-lg font-semibold text-white hover:bg-custombluehover"
+                className="w-full bg-customblue py-2 text-lg text-white font-bold hover:bg-custombluehover"
                 size="lg"
                 type="submit"
               >
                 {t('SEND')}
               </Button>
             </form>
-            <div className="mt-8 text-center">
+            <div className="mt-8 text-center font-light">
               <p>{t('Connect with us on social media')}</p>
               <div className="mt-2 flex justify-center gap-4">
                 <a href="#" className="text-gray-400 hover:text-white" title="Instagram">
@@ -118,7 +118,7 @@ export const Footer = () => {
         {/* Bottom Section - Footer Links and Contact Info */}
         <div className="mt-8 text-center text-gray-400">
           {/* Terms and Policy Links */}
-          <div className="mb-2">
+{/*           <div className="mb-2">
             <p>
               <a href="/privacy-policy" className="hover:text-gray-900 dark:hover:text-white">
                 {t('privacy-policy')}
@@ -128,7 +128,7 @@ export const Footer = () => {
                 {t('terms-of-service')}
               </a>
             </p>
-          </div>
+          </div> */}
           <div>
             <p>&copy; {new Date().getFullYear()} Filip Nedeljkovic. All rights reserved.</p>
           </div>

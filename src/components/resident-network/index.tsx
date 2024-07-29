@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import React from 'react';
+import Marquee from 'react-fast-marquee';
 
 interface Partner {
-  title: string
-  description: string
+  title: string;
+  description: string;
 }
 
 const partners: Partner[] = [
@@ -41,25 +42,27 @@ const partners: Partner[] = [
     description:
       'Local community organizations dedicated to offering support and integration services to newcomers, helping you settle and thrive in your new environment.',
   },
-]
+];
 
 export const ResidentNetwork = () => {
   return (
-    <section id="our-network" className='container'>
+    <section id="our-network">
       <div className="mt-[50px] w-full bg-white py-16">
-        <h2 className="mb-6 text-3xl font-bold">Network of Partners</h2>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {partners.map((partner, index) => (
-            <div
-              key={index}
-              className="rounded-lg border border-gray-200 p-6 shadow-sm transition-shadow duration-300 hover:shadow-lg"
-            >
-              <h3 className="mb-2 text-xl font-semibold">{partner.title}</h3>
-              <p className="text-gray-700">{partner.description}</p>
-            </div>
-          ))}
-        </div>
+        <h2 className="mb-6 text-3xl font-bold text-center">Network of Partners</h2>
+        <Marquee gradient={false} speed={30} className="overflow-hidden px-4">
+          <div className="flex space-x-12 items-center min-w-max px-8">
+            {partners.map((partner, index) => (
+              <div
+                key={index}
+                className="w-[500px] h-[200px] p-4 rounded-lg border border-gray-200 shadow-sm transition-shadow duration-300 hover:shadow-lg"
+              >
+                <h3 className="mb-2 text-lg font-semibold">{partner.title}</h3>
+                <p className="text-gray-700 text-lg">{partner.description}</p>
+              </div>
+            ))}
+          </div>
+        </Marquee>
       </div>
     </section>
-  )
-}
+  );
+};

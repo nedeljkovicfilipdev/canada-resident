@@ -11,9 +11,19 @@ module.exports = {
       },
     },
     extend: {
-      fontFamily: {
-        eventbuk: ['"eventbuk"', ],
-        sans: ['Cormorant Garamond', 'sans-serif'],
+      fontFamily: { 
+        "lato": ['Lato', 'sans-serif'] 
+      },
+      fontWeight: {
+        thin: 100,
+        light: 300,
+        regular: 400,
+        bold: 700,
+        black: 900,
+      },
+      fontStyle: {
+        italic: 'italic',
+        normal: 'normal',
       },
       clipPath: {
         'custom-circle': 'circle(75% at 50% 0%)',
@@ -24,8 +34,9 @@ module.exports = {
         ring: 'hsl(var(--ring))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
-        customblue: '#003760',
-        custombluehover: '#004790',
+        customblue: '#004F8B',
+        custombluehover: '#0082E5',
+        customblue1: '#123860',
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
@@ -61,6 +72,14 @@ module.exports = {
         sm: 'calc(var(--radius) - 4px)',
       },
       keyframes: {
+        flip: {
+          '0%': { transform: 'rotateY(0deg)' },
+          '100%': { transform: 'rotateY(180deg)' },
+        },
+        unflip: {
+          '0%': { transform: 'rotateY(180deg)' },
+          '100%': { transform: 'rotateY(0deg)' },
+        },
         'accordion-down': {
           from: { height: 0 },
           to: { height: 'var(--radix-accordion-content-height)' },
@@ -73,6 +92,8 @@ module.exports = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        flip: 'flip 0.6s forwards',
+        unflip: 'unflip 0.6s forwards',
       },
     },
   },

@@ -22,28 +22,31 @@ export function Header(props: IProps) {
 
   return (
     <div className="fixed left-0 top-0 z-50 flex w-full items-center justify-between border bg-slate-50 px-4 py-4 md:px-12">
-      <Link to="/" className="cursor-pointer font-eventbuk text-xl text-slate-700 hover:text-white dark:text-white">
-        RESIDENT
+      <Link to="/" className="cursor-pointer font-lato text-xl text-slate-700 hover:text-white dark:text-white">
+        {t('title-header')}
       </Link>
-      <div className="flex flex-grow items-center justify-center gap-4">
-        <ScrollLink to="about" smooth={true} duration={500} className="cursor-pointer">
+      <div className="flex flex-grow items-center justify-center gap-4 font-regular">
+        <ScrollLink to="about" smooth={true} duration={500} className="cursor-pointer hover:text-white">
           {t('about-nav')}
         </ScrollLink>
-        <ScrollLink to="services" smooth={true} duration={500} className="cursor-pointer">
+        <ScrollLink to="services" smooth={true} duration={500} className="cursor-pointer hover:text-white">
           {t('services-nav')}
         </ScrollLink>
-        <ScrollLink to="our-programs" smooth={true} duration={500} className="cursor-pointer">
+        <ScrollLink to="consultations" smooth={true} duration={500} className="cursor-pointer hover:text-white">
+          {t('consultations')}
+        </ScrollLink>
+        <ScrollLink to="our-programs" smooth={true} duration={500} className="cursor-pointer hover:text-white">
           {t('our-programs-nav')}
         </ScrollLink>
-        <ScrollLink to="our-network" smooth={true} duration={500} className="cursor-pointer">
+        <ScrollLink to="our-network" smooth={true} duration={500} className="cursor-pointer hover:text-white">
           {t('our-network-nav')}
         </ScrollLink>
-        <ScrollLink to="contact-us" smooth={true} duration={500} className="cursor-pointer">
+        <ScrollLink to="contact-us" smooth={true} duration={500} className="cursor-pointer hover:text-white">
           {t('contact-nav')}
         </ScrollLink>
-        <Button onClick={handleBlog} className="cursor-pointer bg-customblue hover:bg-custombluehover">
+        {/* <Button onClick={handleBlog} className="cursor-pointer bg-customblue hover:bg-custombluehover">
           {t('blog-nav')}
-        </Button>
+        </Button> */}
       </div>
       <div className="flex items-center gap-4">
         <LanguageSelector />

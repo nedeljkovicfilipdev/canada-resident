@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Rocket, Globe2, Wrench } from 'lucide-react'; // Make sure to import your icons correctly
+import { useTranslation } from 'react-i18next'; // If you're using i18next for translations
 
 // Define an interface for the program
 interface Program {
@@ -6,9 +8,11 @@ interface Program {
   content: string;
 }
 
-export const ResidentPrograms = () => {
-  // Update the state type to Program | null
+export const ResidentPrograms: React.FC = () => {
+  const { t } = useTranslation();
   const [program, setProgram] = useState<Program | null>(null);
+
+
 
   const programs: Program[] = [
     {
@@ -46,43 +50,46 @@ export const ResidentPrograms = () => {
   ];
 
   return (
-    <section id="our-programs" className="relative w-full h-screen bg-white">
-      <div className="absolute inset-0 flex flex-col justify-center items-center">
-        <div className="relative flex justify-center items-center">
-          <img
-            src="/images/canada-portfolio1.jpg"
-            alt="Canada"
-            className="w-96 h-96 rounded-full shadow-lg"
-          />
-          <div className="absolute flex flex-wrap justify-center items-center w-full h-full">
-            {programs.map((prog, index) => (
-              <div
-                key={index}
-                className="absolute w-36 h-36 bg-white flex items-center justify-center rounded-full shadow-lg cursor-pointer"
-                style={{
-                  transform: `rotate(${index * 45}deg) translate(14rem) rotate(-${index * 45}deg)`
-                }}
-                onClick={() => setProgram(prog)}
-              >
-                <h3 className="text-center text-sm font-semibold">{prog.title}</h3>
+    <section id="our-programs" className="h-screen">
+      <div className="relative h-full bg-cover bg-center" style={{ backgroundImage: `url('/images/start-journey-niagara.jpg')` }}>
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white">
+          <div className="absolute inset-0 flex flex-col justify-center items-center text-center">
+            <div className="relative flex justify-center items-center ">
+              <div className="absolute flex flex-wrap justify-center items-center ">
+                {programs.map((prog, index) => (
+                  <div
+                    key={index}
+                    className="absolute w-40 h-40 bg-white bg-opacity-95 flex items-center justify-center rounded-full shadow-lg cursor-pointer"
+                    style={{
+                      transform: `rotate(${index * 45}deg) translate(18rem) rotate(-${index * 45}deg)` // Adjusted translation for the image
+                    }}
+                    onClick={() => setProgram(prog)}
+                  >
+                    <h3 className="text-center sm:text-lg xl:text-xl text-[#333] font-bold">{prog.title}</h3>
+                  </div>
+                ))}
+                <div className="mb-6 tracking-tighter font-bold text-white sm:text-3xl xl:text-5xl">OUR PROGRAMS</div>
               </div>
-            ))}
-          </div>
-        </div>
-        {program && (
-          <div className="absolute inset-0 flex items-center justify-center z-10 bg-black bg-opacity-50">
-            <div className="bg-white p-8 rounded-lg shadow-lg max-w-xl text-center">
-              <h2 className="text-xl font-semibold mb-4">{program.title}</h2>
-              <p className="text-lg">{program.content}</p>
-              <button 
-                onClick={() => setProgram(null)}
-                className="mt-4 px-4 py-2 bg-gray-800 text-white rounded-md"
-              >
-                Close
-              </button>
             </div>
           </div>
-        )}
+          {program && (
+            <div
+              className="absolute inset-0 flex items-center justify-center z-10"
+              onClick={() => setProgram(null)} // Close overlay on click anywhere
+            >
+              <div className="bg-white p-8 rounded-lg shadow-lg max-w-xl text-center" onClick={(e) => e.stopPropagation()}>
+                <h2 className="text-2xl font-bold mb-4">{program.title}</h2>
+                <p className="text-xl text-left">{program.content}</p>
+                <button
+                  onClick={() => setProgram(null)}
+                  className="mt-4 px-4 py-2 bg-customblue text-white rounded-md hover:bg-custombluehover tracking-tighter text-xl"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );
