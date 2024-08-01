@@ -34,9 +34,10 @@ module.exports = {
         ring: 'hsl(var(--ring))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
-        customblue: '#004F8B',
-        custombluehover: '#0082E5',
+        customblue: '#13182e',
+        custombluehover: '#2c3350',
         customblue1: '#123860',
+        customgreen: '#23e05a',
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',

@@ -6,11 +6,11 @@ export const Card: React.FC<{ title: string, content: string }> = ({ title, cont
   const [flipped, setFlipped] = useState(false);
 
   return (
-    <div className="perspective-1000 w-full h-64">
+    <div className="perspective-1000 w-full h-[200px]">
       <div
         className={clsx(
           "relative w-full h-full transform transition-transform duration-500",
-          flipped ? " animate-flip" : "animate-unflip"
+          flipped ? "animate-flip" : "animate-unflip"
         )}
         onClick={() => setFlipped(!flipped)}
       >
@@ -36,7 +36,7 @@ const AccordionItem: React.FC<{ title: string, content: React.ReactNode, isOpen:
     <div className="border-b border-gray-300">
       <button
         onClick={onToggle}
-        className="w-full p-4 flex items-center justify-between bg-white hover:bg-gray-100 focus:outline-none"
+        className="w-full p-4 flex items-center justify-between bg-white hover:bg-gray-50 focus:outline-none"
       >
         <span className="tracking-tighter sm:text-xl xl:text-2xl font-regular">{title}</span>
         <span className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
@@ -60,50 +60,63 @@ export const ResidentServices = () => {
 
   return (
     <section id="services" className="w-full">
-      <div className="w-full py-16 bg-gray-50">
+      <div className="w-full py-16 bg-white">
         <div className="px-4 md:px-6 container">
           <div className="mx-auto w-full max-w-full space-y-20">
             
             {/* Our Services */}
-            <div className="p-8 bg-white rounded-lg shadow-md">
-              <h4 className="mb-8 text-center tracking-tighter sm:text-3xl xl:text-5xl p-4 text-black rounded-t-lg font-bold">{t('services')}</h4>
+            <div className="p-8 bg-white rounded-lg shadow-md text-xl">
+              <h4 className="mb-8 text-center tracking-tighter sm:text-3xl xl:text-5xl p-4 text-black rounded-t-lg font-bold text-3xl">{t('services')}</h4>
               <div className="space-y-4 mb-4">
                 <AccordionItem
                   title={t('immigration-consulting-experts')}
-                  content={<div className="text-xl"><p>{t('immigration-consulting-experts-description')}</p></div>}
+                  content={<div className="text-lg"><p>{t('immigration-consulting-experts-description')}</p></div>}
                   isOpen={expandedItem === 'immigration-consulting-experts'}
                   onToggle={() => toggleAccordion('immigration-consulting-experts')}
                 />
                 <AccordionItem
                   title={t('recruiters-job-placements')}
-                  content={<div className="text-xl"><p>{t('recruiters-job-placements-description')}</p></div>}
+                  content={<div className="text-lg"><p>{t('recruiters-job-placements-description')}</p></div>}
                   isOpen={expandedItem === 'recruiters-job-placements'}
                   onToggle={() => toggleAccordion('recruiters-job-placements')}
                 />
                 <AccordionItem
                   title={t('business-brokers')}
-                  content={<div className="text-xl"><p>{t('business-brokers-description')}</p></div>}
+                  content={<div className="text-lg"><p>{t('business-brokers-description')}</p></div>}
                   isOpen={expandedItem === 'business-brokers'}
                   onToggle={() => toggleAccordion('business-brokers')}
                 />
                 <AccordionItem
                   title={t('educational-institutions')}
-                  content={<div className="text-xl"><p>{t('educational-institutions-description')}</p></div>}
+                  content={<div className="text-lg"><p>{t('educational-institutions-description')}</p></div>}
                   isOpen={expandedItem === 'educational-institutions'}
                   onToggle={() => toggleAccordion('educational-institutions')}
                 />
                 <AccordionItem
                   title={t('legal-compliance-advisors')}
-                  content={<div className="text-xl"><p>{t('legal-compliance-advisors-description')}</p></div>}
+                  content={<div className="text-lg"><p>{t('legal-compliance-advisors-description')}</p></div>}
                   isOpen={expandedItem === 'legal-compliance-advisors'}
                   onToggle={() => toggleAccordion('legal-compliance-advisors')}
                 />
               </div>
               
               {/* What Sets Us Apart */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* Display cards on larger screens */}
+              <div className="hidden md:grid md:grid-cols-2 gap-4">
                 <Card title={t('holistic-approach')} content={t('holistic-approach-text')} />
                 <Card title={t('understanding-unique-journeys')} content={t('understanding-unique-journeys-text')} />
+              </div>
+              
+              {/* Display title and content on mobile screens */}
+              <div className="md:hidden space-y-4 mb-4">
+                <div className="p-4 bg-white rounded-lg shadow-md">
+                  <h3 className="text-lg font-bold font-bold mb-4">{t('holistic-approach')}</h3>
+                  <p className="text-lg text-[#333] mt-2">{t('holistic-approach-text')}</p>
+                </div>
+                <div className="p-4 bg-white rounded-lg shadow-md">
+                  <h3 className="text-lg font-bold font-bold mb-4">{t('understanding-unique-journeys')}</h3>
+                  <p className="text-lg text-[#333] mt-2">{t('understanding-unique-journeys-text')}</p>
+                </div>
               </div>
             </div>
           </div>

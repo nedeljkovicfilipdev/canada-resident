@@ -27,24 +27,29 @@ export function Header(props: IProps) {
   return (
     <div className="relative">
       <header className="fixed left-0 top-0 z-50 flex w-full items-center justify-between border bg-slate-50 px-4 py-4 md:px-12">
-        <Link to="/" className="cursor-pointer font-lato text-xl text-slate-700 hover:text-white dark:text-white">
-          {t('title-header')}
-        </Link>
+        <ScrollLink to="poster" smooth={true} duration={500} className="flex flex-col items-center text-center cursor-pointer hover:opacity-75">
+          <img 
+            src="/images/logo/diverse-logo-crop-symbol.png" 
+            alt="Diverse Logo" 
+            className="h-6 w-auto dark:filter dark:brightness-90" 
+          />
+          <span className="text-lg font-black text-customblue">{t('title-header')}</span>
+        </ScrollLink>
         <div className="hidden md:flex flex-grow items-center justify-center gap-4 font-regular">
-          <ScrollLink to="about" smooth={true} duration={500} className="cursor-pointer hover:text-white">
-            {t('about-nav')}
-          </ScrollLink>
-          <ScrollLink to="services" smooth={true} duration={500} className="cursor-pointer hover:text-white">
+        <ScrollLink to="services" smooth={true} duration={500} className="cursor-pointer hover:text-white">
             {t('services-nav')}
           </ScrollLink>
-          <ScrollLink to="consultations" smooth={true} duration={500} className="cursor-pointer hover:text-white">
-            {t('consultations')}
+          <ScrollLink to="about" smooth={true} duration={500} className="cursor-pointer hover:text-white">
+            {t('about-nav')}
           </ScrollLink>
           <ScrollLink to="our-programs" smooth={true} duration={500} className="cursor-pointer hover:text-white">
             {t('our-programs-nav')}
           </ScrollLink>
-          <ScrollLink to="our-network" smooth={true} duration={500} className="cursor-pointer hover:text-white">
+          {/* <ScrollLink to="our-network" smooth={true} duration={500} className="cursor-pointer hover:text-white">
             {t('our-network-nav')}
+          </ScrollLink> */}
+          <ScrollLink to="consultations" smooth={true} duration={500} className="cursor-pointer hover:text-white">
+            {t('consultations')}
           </ScrollLink>
           <ScrollLink to="contact-us" smooth={true} duration={500} className="cursor-pointer hover:text-white">
             {t('contact-nav')}

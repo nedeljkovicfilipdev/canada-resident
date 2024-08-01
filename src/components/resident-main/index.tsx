@@ -22,18 +22,19 @@ export const ResidentMain = () => {
         <ResidentAbout />
       </Suspense>
       <Suspense fallback={<div>Loading...</div>}>
-        <ResidentServices />
-      </Suspense>
-
-      <Suspense fallback={<div>Loading...</div>}>
-        <ResidentJourney />
-      </Suspense>
-      <Suspense fallback={<div>Loading...</div>}>
         <ResidentPrograms />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <ResidentServices />
       </Suspense>
       <Suspense fallback={<div>Loading...</div>}>
         <ResidentNetwork />
       </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <ResidentJourney />
+      </Suspense>
+
+
 
       
       {/* <Suspense fallback={<div>Loading...</div>}>

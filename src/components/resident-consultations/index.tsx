@@ -10,9 +10,9 @@ export const ResidentJourney = () => {
 
   return (
     <section id="consultations" className="p-8 bg-white">
-      <section className="relative h-96 bg-cover bg-center" style={{ backgroundImage: "url('/images/visa-application-canada.jpg')" }}>
+      <section className="relative h-96 bg-cover bg-center" style={{ backgroundImage: "url('/images/visa-application-canada.jpg')"}}>
         <div className="flex items-center justify-center h-full">
-          <div className="text-center text-white p-6 bg-opacity-30 bg-slate-800 rounded-lg shadow-lg">
+          <div className="text-center text-white p-6 bg-opacity-70 bg-customblue rounded-lg shadow-lg ">
             <h2 className="sm:text-3xl xl:text-5xl font-bold mb-4">{t('journeyStart.consultationsTitle')}</h2>
           </div>
         </div>
