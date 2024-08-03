@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import clsx from 'clsx';
+import { useSpring, animated } from '@react-spring/web';
 
 export const Card: React.FC<{ title: string, content: string }> = ({ title, content }) => {
   const [flipped, setFlipped] = useState(false);
@@ -32,6 +33,16 @@ export const Card: React.FC<{ title: string, content: string }> = ({ title, cont
 };
 
 const AccordionItem: React.FC<{ title: string, content: React.ReactNode, isOpen: boolean, onToggle: () => void }> = ({ title, content, isOpen, onToggle }) => {
+
+  const animationProps = useSpring({
+    from: { maxHeight: 0, opacity: 0 },
+    to: {
+      maxHeight: isOpen ? 1000 : 0,
+      opacity: isOpen ? 1 : 0
+    },
+    config: { duration: 300 }
+  });
+
   return (
     <div className="border-b border-gray-300">
       <button
@@ -45,7 +56,9 @@ const AccordionItem: React.FC<{ title: string, content: React.ReactNode, isOpen:
           </svg>
         </span>
       </button>
-      {isOpen && <div className="p-4 bg-gray-50">{content}</div>}
+      <animated.div style={animationProps} className="overflow-hidden">
+        <div className="p-4 bg-gray-50">{content}</div>
+      </animated.div>
     </div>
   );
 };

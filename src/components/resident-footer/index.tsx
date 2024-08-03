@@ -28,7 +28,7 @@ export const Footer = () => {
     setStatus(null);
 
     try {
-      const response = await axios.post('http://localhost:3000/api/emails/send', formData); // Adjust this URL to match your deployment
+      const response = await axios.post('/api/emails/send', formData); // Adjust this URL to match your deployment
       if (response.status === 200) {
         setStatus('Email sent successfully!');
         setFormData({ firstName: '', lastName: '', email: '', message: '' }); // Clear the form
@@ -41,10 +41,10 @@ export const Footer = () => {
 
   return (
     <section id="contact-us">
-      <div className="bg-customblue text-gray-200 w-full border-t px-4 py-8 md:px-12">
+      <div className="bg-customblue text-gray-200 w-full px-4 py-8 md:px-12">
         <div className="container mx-auto grid grid-cols-1 items-start gap-8 md:grid-cols-3 md:items-center">
           {/* Left Section - Logo and Contact Info */}
-          <div className="mb-4 flex flex-col items-center md:mb-0 md:items-start">
+          <div className="mb-4 flex flex-col items-center md:mb-0 md:items-start bg-black bg-opacity-10 rounded-2xl p-4">
             <Link
               to="poster"
               smooth={true}
@@ -52,13 +52,13 @@ export const Footer = () => {
               className="cursor-pointer text-4xl hover:text-white dark:text-white"
             >
             <img 
-                src="/images/logo/diverse-logo-crop.png" 
+                src="/images/logo/dv-logo-white.png" 
                 alt="Diverse Logo" 
-                className="h-60 w-auto dark:filter dark:brightness-90" 
+                className="h-54 w-auto dark:filter dark:brightness-90 rounded-2xl" 
             />
             </Link>
 
-            <div className="mb-6 p-4 text-white rounded-lg shadow-md">
+            <div className="mb-6 p-4 text-white rounded-lg">
               <p className="mb-2">
                 <a href="tel:+381645772908" className="flex text-blue-400 hover:text-blue-300">
                   <Phone className='mr-4'/>+381 64 4684465
@@ -154,13 +154,13 @@ export const Footer = () => {
             <div className="mt-8 text-center font-light">
               <p>{t('connect-social-network')}</p>
               <div className="mt-2 flex justify-center gap-4">
-                <a href="#" className="text-gray-400 hover:text-white" title="Instagram">
+                {/* <a href="#" className="text-gray-400 hover:text-white" title="Instagram">
                   <Instagram size={24} />
                 </a>
                 <a href="#" className="text-gray-400 hover:text-white" title="Facebook">
                   <Facebook size={24} />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-white" title="LinkedIn">
+                </a> */}
+                <a href="https://www.linkedin.com/company/diverse-visa/" className="text-gray-400 hover:text-white" title="LinkedIn">
                   <Linkedin size={24} />
                 </a>
               </div>

@@ -27,31 +27,30 @@ export function Header(props: IProps) {
   return (
     <div className="relative">
       <header className="fixed left-0 top-0 z-50 flex w-full items-center justify-between border bg-slate-50 px-4 py-4 md:px-12">
-        <ScrollLink to="poster" smooth={true} duration={500} className="flex flex-col items-center text-center cursor-pointer hover:opacity-75">
+        <ScrollLink to="poster" smooth={true} duration={500} className="flex items-center text-center cursor-pointer hover:opacity-75">
           <img 
-            src="/images/logo/diverse-logo-crop-symbol.png" 
+            src="/images/logo/dv-icon.png" 
             alt="Diverse Logo" 
-            className="h-6 w-auto dark:filter dark:brightness-90" 
+            className="h-10 w-auto" 
           />
-          <span className="text-lg font-black text-customblue">{t('title-header')}</span>
         </ScrollLink>
-        <div className="hidden md:flex flex-grow items-center justify-center gap-4 font-regular">
-        <ScrollLink to="services" smooth={true} duration={500} className="cursor-pointer hover:text-white">
+        <div className="hidden md:flex flex-grow items-center justify-center gap-4">
+        <ScrollLink to="services" smooth={true} duration={500} className="cursor-pointer p-2 rounded-xl hover:text-white hover:bg-customblue transition-colors duration-200">
             {t('services-nav')}
           </ScrollLink>
-          <ScrollLink to="about" smooth={true} duration={500} className="cursor-pointer hover:text-white">
+          <ScrollLink to="about" smooth={true} duration={500} className="cursor-pointer p-2 rounded-xl hover:text-white hover:bg-customblue transition-colors duration-200">
             {t('about-nav')}
           </ScrollLink>
-          <ScrollLink to="our-programs" smooth={true} duration={500} className="cursor-pointer hover:text-white">
+          <ScrollLink to="our-programs" smooth={true} duration={500} className="cursor-pointer p-2 rounded-xl hover:text-white hover:bg-customblue transition-colors duration-200">
             {t('our-programs-nav')}
           </ScrollLink>
           {/* <ScrollLink to="our-network" smooth={true} duration={500} className="cursor-pointer hover:text-white">
             {t('our-network-nav')}
           </ScrollLink> */}
-          <ScrollLink to="consultations" smooth={true} duration={500} className="cursor-pointer hover:text-white">
+          <ScrollLink to="consultations" smooth={true} duration={500} className="cursor-pointer p-2 rounded-xl hover:text-white hover:bg-customblue transition-colors duration-200">
             {t('consultations')}
           </ScrollLink>
-          <ScrollLink to="contact-us" smooth={true} duration={500} className="cursor-pointer hover:text-white">
+          <ScrollLink to="contact-us" smooth={true} duration={500} className="cursor-pointer p-2 rounded-xl hover:text-white hover:bg-customblue transition-colors duration-200">
             {t('contact-nav')}
           </ScrollLink>
         </div>
@@ -63,7 +62,7 @@ export function Header(props: IProps) {
           </Button> */}
         </div>
         <button 
-          className="md:hidden flex items-center justify-center p-2 text-slate-700 hover:text-white"
+          className="md:hidden flex items-center justify-center p-2 text-slate-700"
           onClick={toggleMenu}
         >
           <Menu className="h-6 w-6" />
@@ -74,13 +73,13 @@ export function Header(props: IProps) {
           <div className="flex justify-between items-center p-4">
             <span className="text-xl font-bold">{t('title-header')}</span>
             <button 
-              className="p-2 text-slate-700 hover:text-white"
+              className="p-2 text-slate-700"
               onClick={toggleMenu}
             >
               <X className="h-6 w-6" />
             </button>
           </div>
-          <nav className="flex flex-col items-center space-y-4">
+          <nav className="flex flex-col items-center space-y-4 mt-8">
             <ScrollLink 
               to="about" 
               smooth={true} 

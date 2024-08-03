@@ -46,7 +46,7 @@ export const ResidentJourney = () => {
             {successStories.map((story, index) => (
               <div
                 key={index}
-                className="bg-white p-4 rounded-lg shadow-md flex-none flex flex-col justify-center mx-2"
+                className="bg-white p-4 rounded-lg flex-none flex flex-col justify-center mx-2"
               >
                 <p className="text-gray-700 italic text-lg mb-2">{story.text}</p>
                 <p className="text-gray-900 font-bold text-lg">{story.author}</p>
