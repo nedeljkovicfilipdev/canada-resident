@@ -14,7 +14,6 @@ export const Footer = () => {
     message: ''
   });
   const [status, setStatus] = useState<string | null>(null);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData({
@@ -22,6 +21,7 @@ export const Footer = () => {
       [name]: value
     });
   };
+  console.log(import.meta.env.VITE_PROXY_SERVER)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
