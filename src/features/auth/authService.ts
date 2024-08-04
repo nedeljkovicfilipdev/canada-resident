@@ -2,7 +2,7 @@ import axios from 'axios'
 
 // Login user
 const login = async (userData: any) => {
-  const response = await axios.post('http://localhost:3000/api/users/login', userData)
+  const response = await axios.post('/api/users/login', userData)
   console.log(response)
   if (response.data) {
     localStorage.setItem('user', JSON.stringify(response.data.user))//
