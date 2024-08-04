@@ -26,7 +26,7 @@ export default defineConfig({
   server: {
     host: '0.0.0.0', // Allows external access to the dev server
     proxy: {
-      '/api': {
+      '/api/': {
         target: process.env.VITE_PROXY_SERVER || 'http://localhost:3000', // Update target port to 3000
         changeOrigin: true, // Changes the origin of the host header to the target URL
         secure: false, // Accepts self-signed certificates

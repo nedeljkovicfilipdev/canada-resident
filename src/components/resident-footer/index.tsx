@@ -28,7 +28,7 @@ export const Footer = () => {
     setStatus(null);
 
     try {
-      const response = await axios.post('/api/emails/send', formData); // Adjust this URL to match your deployment
+      const response = await axios.post('/api/emails', formData); // Adjust this URL to match your deployment
       if (response.status === 200) {
         setStatus('Email sent successfully!');
         setFormData({ firstName: '', lastName: '', email: '', message: '' }); // Clear the form
