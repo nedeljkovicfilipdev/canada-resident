@@ -65,7 +65,7 @@ export const ResidentPrograms = () => {
   return (
     <section id="our-programs" className="h-screen">
       <div className="relative h-full bg-cover bg-center" style={{ backgroundImage: `url('/images/niagara-waterfalls.jpg')` }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white">
+        <div className="absolute inset-0 bg-customblue bg-opacity-50">
           <div className="absolute inset-0 flex flex-col justify-center items-center text-center">
             {/* Rotating structure for large screens */}
             <div className="relative hidden lg:flex justify-center items-center">
@@ -73,7 +73,7 @@ export const ResidentPrograms = () => {
                 {programs.map((prog, index) => (
                   <div
                     key={index}
-                    className="absolute w-40 h-40 bg-white bg-opacity-90 flex items-center justify-center rounded-full shadow-lg cursor-pointer"
+                    className="absolute w-40 h-40 bg-white flex items-center justify-center rounded-full shadow-lg cursor-pointer"
                     style={{
                       transform: `rotate(${index * 45}deg) translate(18rem) rotate(-${index * 45}deg)` // Adjusted translation for the image
                     }}
@@ -104,12 +104,12 @@ export const ResidentPrograms = () => {
               style={{ opacity, transform: scale.to(s => `scale(${s})`) }}
               onClick={handleClose} // Close overlay on click anywhere
             >
-              <div className="bg-white p-8 rounded-lg shadow-lg max-w-xl text-center" onClick={(e) => e.stopPropagation()}>
+              <div className="bg-customblue text-white p-8 rounded-lg shadow-lg max-w-xl text-center" onClick={(e) => e.stopPropagation()}>
                 <h2 className="text-2xl font-bold mb-4">{program.title}</h2>
-                <p className="text-xl text-left">{program.content}</p>
+                <p className="text-xl text-justify tracking-tighter">{program.content}</p>
                 <button
                   onClick={handleClose}
-                  className="mt-4 px-4 py-2 bg-customblue text-white rounded-md hover:bg-custombluehover tracking-tighter text-xl"
+                  className="mt-4 px-4 py-2 bg-custombluehover text-white rounded-md hover:bg-white hover:text-black tracking-tighter text-xl"
                 >
                   {t('close')}
                 </button>

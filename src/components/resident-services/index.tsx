@@ -4,31 +4,13 @@ import clsx from 'clsx';
 import { useSpring, animated } from '@react-spring/web';
 
 export const Card: React.FC<{ title: string, content: string }> = ({ title, content }) => {
-  const [flipped, setFlipped] = useState(false);
 
   return (
-    <div className="perspective-1000 w-full h-[200px]">
-      <div
-        className={clsx(
-          "relative w-full h-full transform transition-transform duration-500",
-          flipped ? "animate-flip" : "animate-unflip"
-        )}
-        onClick={() => setFlipped(!flipped)}
-      >
-        <div className={clsx(
-          "absolute inset-0 p-8 rounded-lg bg-customblue shadow-md flex items-center justify-center backface-hidden cursor-pointer hover:bg-custombluehover",
-          flipped ? "hidden" : ""
-        )}>
-          <h3 className="mb-6 text-2xl sm:text-2xl xl:text-3xl font-bold text-white">{title}</h3>
-        </div>
-        <div className={clsx(
-          "absolute inset-0 p-8 rounded-lg bg-white shadow-md flex items-center justify-center backface-hidden cursor-pointer",
-          flipped ? "" : "hidden"
-        )}>
-          <p className="text-xl text-gray-600 animate-flip tracking-tighter text-justify">{content}</p>
-        </div>
-      </div>
-    </div>
+  <div className="w-full h-auto p-8 rounded-lg bg-customblue shadow-md flex flex-col justify-center hover:bg-custombluehover">
+    <h3 className="mb-6 text-2xl sm:text-2xl xl:text-3xl font-bold text-white">{title}</h3>
+    <p className="text-xl text-gray-100 tracking-tighter text-justify">{content}</p>
+  </div>
+
   );
 };
 
@@ -44,10 +26,10 @@ const AccordionItem: React.FC<{ title: string, content: React.ReactNode, isOpen:
   });
 
   return (
-    <div className="border-b border-gray-300">
+    <div className="border border-gray-300">
       <button
         onClick={onToggle}
-        className="w-full p-4 flex items-center justify-between bg-white hover:bg-gray-50 focus:outline-none"
+        className="w-full p-4 flex items-center justify-between bg-custombluehover hover:bg-customblue text-white focus:outline-none"
       >
         <span className="tracking-tighter sm:text-xl xl:text-2xl font-regular">{title}</span>
         <span className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
@@ -78,8 +60,8 @@ export const ResidentServices = () => {
           <div className="mx-auto w-full max-w-full space-y-20">
             
             {/* Our Services */}
-            <div className="p-8 bg-white rounded-lg shadow-md text-xl">
-              <h4 className="mb-8 text-center tracking-tighter sm:text-3xl xl:text-5xl p-4 text-black rounded-t-lg font-bold text-3xl">{t('services')}</h4>
+            <div className="p-8 bg-customblue rounded-lg shadow-md text-xl">
+              <h4 className="mb-8 text-center sm:text-3xl xl:text-5xl p-4 text-white rounded-t-lg font-bold text-3xl">{t('services')}</h4>
               <div className="space-y-4 mb-4">
                 <AccordionItem
                   title={t('immigration-consulting-experts')}

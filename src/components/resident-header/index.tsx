@@ -35,15 +35,17 @@ export function Header(props: IProps) {
           />
         </ScrollLink>
         <div className="hidden md:flex flex-grow items-center justify-center gap-4">
-        <ScrollLink to="services" smooth={true} duration={500} className="cursor-pointer p-2 rounded-xl hover:text-white hover:bg-customblue transition-colors duration-200">
-            {t('services-nav')}
-          </ScrollLink>
-          <ScrollLink to="about" smooth={true} duration={500} className="cursor-pointer p-2 rounded-xl hover:text-white hover:bg-customblue transition-colors duration-200">
+        <ScrollLink to="about" smooth={true} duration={500} className="cursor-pointer p-2 rounded-xl hover:text-white hover:bg-customblue transition-colors duration-200">
             {t('about-nav')}
           </ScrollLink>
           <ScrollLink to="our-programs" smooth={true} duration={500} className="cursor-pointer p-2 rounded-xl hover:text-white hover:bg-customblue transition-colors duration-200">
             {t('our-programs-nav')}
           </ScrollLink>
+        <ScrollLink to="services" smooth={true} duration={500} className="cursor-pointer p-2 rounded-xl hover:text-white hover:bg-customblue transition-colors duration-200">
+            {t('services-nav')}
+          </ScrollLink>
+
+
           {/* <ScrollLink to="our-network" smooth={true} duration={500} className="cursor-pointer hover:text-white">
             {t('our-network-nav')}
           </ScrollLink> */}
