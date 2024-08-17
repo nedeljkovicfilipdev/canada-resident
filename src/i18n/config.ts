@@ -3,7 +3,7 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import resourcesToBackend from 'i18next-resources-to-backend';
 
-export const LANGUAGES = ['en', 'ru', 'sr'];
+export const LANGUAGES = ['en', 'ru', 'sr', 'uk'];
 
 i18next
   .use(LanguageDetector)

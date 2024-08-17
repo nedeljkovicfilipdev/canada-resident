@@ -65,7 +65,7 @@ export const ResidentPrograms = () => {
   return (
     <section id="our-programs" className="h-screen">
       <div className="relative h-full bg-cover bg-center" style={{ backgroundImage: `url('/images/niagara-waterfalls.jpg')` }}>
-        <div className="absolute inset-0 bg-customblue bg-opacity-50">
+        <div className="absolute inset-0 bg-customblue bg-opacity-0">
           <div className="absolute inset-0 flex flex-col justify-center items-center text-center">
             {/* Rotating structure for large screens */}
             <div className="relative hidden lg:flex justify-center items-center">

@@ -1,7 +1,7 @@
 // router.tsx
 import { createHashRouter, RouteObject } from 'react-router-dom';
 import ErrorPage from './components/error-page';
-import { getDefaultLayout } from './components/layout';
+import { getBlogLayout, getDefaultLayout } from './components/layout';
 import Home from './pages/home';
 import Blog from './pages/blog';
 import Login from './pages/login';
@@ -19,7 +19,11 @@ export const routerObjects: RouteObject[] = [
   },
   {
     path: '/blog',
-    element: getDefaultLayout(<Blog />),
+    element: getBlogLayout(<Blog />),
+  },
+  {
+    path: '/blog/:id',
+    element: getBlogLayout(<Blog />),
   },
   {
     path: '/',

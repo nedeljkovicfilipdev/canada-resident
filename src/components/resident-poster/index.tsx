@@ -1,34 +1,29 @@
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-scroll';
+import { EmailForm } from '../_email';
 
 const ResidentPoster = () => {
   const { t } = useTranslation();
 
   return (
     <section id="poster" className="relative h-screen">
-      {/* Background Color and Opacity */}
-
       {/* Background Image */}
       <div className="absolute inset-0 bg-[url('/images/canada-poster.jpg')] bg-cover bg-center z-0"></div>
 
-      <div className="relative h-full w-full flex items-center justify-center px-4 md:px-6 z-20">
-        <div className="grid items-center gap-6">
-          <div className="flex flex-col justify-center space-y-4 text-center mt-40">
-            <div className="p-8 rounded-2xl shadow-lg bg-opacity-75 bg-customblue mb-12">
-              <h1 className="mb-6 font-bold tracking-tighter text-white sm:text-xl xl:text-5xl">
+      <div className="relative h-full w-full flex z-20">
+        <div className="grid md:grid-cols-7 gap-6 items-center w-full">
+          <div className="xl:col-span-7 flex flex-col md:flex-row items-center justify-between shadow-lg bg-opacity-75 bg-customblue p-8 w-full">
+            {/* Headline */}
+            <div className="flex flex-col mx-auto items-center justify-center text-center text-white">
+              <h1 className="mb-6 text-2xl font-black tracking-tighter xl:text-5xl">
                 {t('headline')}
               </h1>
-              <h2 className="mb-6 font-regular text-3xl tracking-tighter text-white sm:text-2xl xl:text-2xl">
+              <h2 className="mb-6 font-regular text-xl tracking-tighter xl:text-2xl">
                 {t('subHeadline')}
               </h2>
-              <Link 
-                to="contact-us" 
-                smooth={true} 
-                duration={500} 
-                className="cursor-pointer font-bold inline-flex items-center gap-3 py-4 px-6 bg-white text-black rounded-lg shadow-md hover:bg-gray-100 transition-colors duration-300"
-              >
-                {t('callToAction')}
-              </Link>
+            </div>
+            {/* Form */}
+            <div className="md:w-2/7 bg-white bg-opacity- p-6 text-black rounded-2xl shadow-lg text-left">
+              <EmailForm />
             </div>
           </div>
         </div>

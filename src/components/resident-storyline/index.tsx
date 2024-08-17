@@ -5,10 +5,10 @@ export const ResidentStoryline = () => {
 
   return (
     <div>
-      <section className="mt-[50px] w-full py-16 bg-gradient-to-r from-customblue to-custombluehover text-white">
-        <div className="container px-4 md:px-6">
+      <section className="w-full py-8 bg-gradient-to-r from-customblue to-custombluehover text-white">
+        <div className="mx-[40px] px-4 md:px-6">
           <div className="mx-auto w-full max-w-full space-y-12">
-            <h1 className="text-center text-3xl tracking-tighter sm:text-lg xl:text-5xl font-bold">
+            <h1 className="text-center text-3xl sm:text-lg xl:text-5xl font-bold">
               {t('storyline-title')}
             </h1>
             <div className="flex flex-col items-center space-y-2 p-4">

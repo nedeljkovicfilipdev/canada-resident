@@ -6,9 +6,9 @@ import { useSpring, animated } from '@react-spring/web';
 export const Card: React.FC<{ title: string, content: string }> = ({ title, content }) => {
 
   return (
-  <div className="w-full h-auto p-8 rounded-lg bg-customblue shadow-md flex flex-col justify-center hover:bg-custombluehover">
+  <div className="w-full h-auto p-8 rounded-lg bg-customblue shadow-md flex flex-col justify-center hover:bg-customblue1 hover:cursor-pointer tracking-tighter">
     <h3 className="mb-6 text-2xl sm:text-2xl xl:text-3xl font-bold text-white">{title}</h3>
-    <p className="text-xl text-gray-100 tracking-tighter text-justify">{content}</p>
+    <p className="text-xl text-gray-100 text-justify">{content}</p>
   </div>
 
   );
@@ -26,10 +26,10 @@ const AccordionItem: React.FC<{ title: string, content: React.ReactNode, isOpen:
   });
 
   return (
-    <div className="border border-gray-300">
+    <div className="">
       <button
         onClick={onToggle}
-        className="w-full p-4 flex items-center justify-between bg-custombluehover hover:bg-customblue text-white focus:outline-none"
+        className="w-full p-4 flex items-center justify-between bg-custombluehover hover:bg-customblue1 text-white focus:outline-none"
       >
         <span className="tracking-tighter sm:text-xl xl:text-2xl font-regular">{title}</span>
         <span className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>

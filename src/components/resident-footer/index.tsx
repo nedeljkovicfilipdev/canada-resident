@@ -1,43 +1,10 @@
-import { useState } from 'react';
-import axios from 'axios';
 import { useTranslation } from 'react-i18next';
-import { Button } from '../ui/button';
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, PhoneCall } from 'lucide-react';
 import { Link } from 'react-scroll';
+import { EmailForm } from '../_email/index';
 
 export const Footer = () => {
   const { t } = useTranslation();
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    message: ''
-  });
-  const [status, setStatus] = useState<string | null>(null);
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-  };
-  console.log(import.meta.env.VITE_PROXY_SERVER)
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus(null);
-
-    try {
-      const response = await axios.post('/api/emails', formData); // Adjust this URL to match your deployment
-      if (response.status === 200) {
-        setStatus('Email sent successfully!');
-        setFormData({ firstName: '', lastName: '', email: '', message: '' }); // Clear the form
-      }
-    } catch (error) {
-      console.error('Error sending email:', error);
-      setStatus('Failed to send email. Please try again later.');
-    }
-  };
 
   return (
     <section id="contact-us">
@@ -87,80 +54,17 @@ export const Footer = () => {
 
           {/* Right Section - Form and Social Links */}
           <div className='bg-white p-6 text-black rounded-2xl'>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="flex flex-col gap-4 md:flex-row">
-                <div className="flex-1">
-                  <label htmlFor="firstName" className="block text-sm">
-                    {t('First Name')}
-                  </label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    value={formData.firstName}
-                    onChange={handleChange}
-                    className="mt-1 block w-full border-b border-gray-500 bg-transparent p-2"
-                  />
-                </div>
-                <div className="flex-1">
-                  <label htmlFor="lastName" className="block text-sm">
-                    {t('Last Name')}
-                  </label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={handleChange}
-                    className="mt-1 block w-full border-b border-gray-500 bg-transparent p-2"
-                  />
-                </div>
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm">
-                  {t('Email')}
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="mt-1 block w-full border-b border-gray-500 bg-transparent p-2"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm">
-                  {t('Message')}
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="mt-1 block w-full border-b border-gray-500 bg-transparent p-2"
-                  rows={4}
-                ></textarea>
-              </div>
-              <Button
-                className="w-full bg-customblue py-2 text-lg text-white font-bold hover:bg-custombluehover"
-                size="lg"
-                type="submit"
-              >
-                {t('SEND')}
-              </Button>
-              {status && <p className="mt-4 text-center">{status}</p>}
-            </form>
+            <EmailForm />
             <div className="mt-8 text-center font-light">
               <p>{t('connect-social-network')}</p>
               <div className="mt-2 flex justify-center gap-4">
-                {/* <a href="#" className="text-gray-400 hover:text-white" title="Instagram">
+                <a href="https://www.instagram.com/diversevisa?igsh=eXpvb3Zsd2R5dW03" className="text-custombluehover hover:text-customblue" title="Instagram">
                   <Instagram size={24} />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white" title="Facebook">
+                <a href="https://www.facebook.com/profile.php?id=61564051493332" className="text-custombluehover hover:text-customblue" title="Facebook">
                   <Facebook size={24} />
-                </a> */}
-                <a href="https://www.linkedin.com/company/diverse-visa/" className="text-gray-400 hover:text-white" title="LinkedIn">
+                </a>
+                <a href="https://www.linkedin.com/company/diverse-visa/" className="text-custombluehover hover:text-customblue" title="LinkedIn">
                   <Linkedin size={24} />
                 </a>
               </div>

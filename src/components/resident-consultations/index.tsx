@@ -1,48 +1,44 @@
-import Marquee from 'react-fast-marquee';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-scroll';
 
 export const ResidentJourney = () => {
   const { t } = useTranslation();
 
-  const firstMeetingPoints = t('journeyStart.firstMeetingPoints', { returnObjects: true }) as string[];
-  const preparePoints = t('journeyStart.preparePoints', { returnObjects: true }) as string[];
-  const successStories = t('journeyStart.successStories', { returnObjects: true }) as { text: string, author: string }[];
+  const firstMeetingPoints = t('journeyStart.firstMeetingPoints', { returnObjects: true }) as { title: string; description: string }[];
 
   return (
-    <section id="consultations" className="p-8 h-screen">
+    <section id="consultations" className="h-screen relative">
       <section className="relative h-full bg-cover bg-center" style={{ backgroundImage: "url('/images/visa-application-canada.jpg')" }}>
-        <div className="absolute top-0 w-full flex justify-center pt-8">
-          <div className="text-center text-white p-6 bg-opacity-70 bg-customblue rounded-lg shadow-lg">
-            <h2 className="sm:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4">{t('journeyStart.consultationsTitle')}</h2>
-          </div>
+        <div className="absolute top-0 left-0 w-full text-center bg-opacity-70 bg-customblue shadow-lg p-4">
+          <h2 className="text-2xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-white">{t('journeyStart.consultationsTitle')}</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 h-full">
-          <div className="col-span-1 md:col-span-3 flex items-center justify-center">
-            <div className="w-full md:w-2/5 h-auto md:h-[350px] bg-customblue text-white p-6 rounded-lg shadow-lg bg-opacity-90">
-              <h4 className="text-2xl md:text-3xl mb-4 md:mb-8 font-bold">{t('journeyStart.firstMeetingTitle')}</h4>
-              <ul className="list-disc list-inside space-y-1 md:space-y-2 text-lg md:text-xl">
-                {firstMeetingPoints.map((point, index) => (
-                  <li key={index}>{point}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div className="absolute bottom-0 w-full bg-white py-2">
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-4 md:mb-6">{t('journeyStart.successStoriesTitle')}</h3>
-          <Marquee gradient={false} speed={30} className="overflow-hidden">
-            <div className="flex space-x-2 md:space-x-4">
-              {successStories.map((story, index) => (
-                <div
-                  key={index}
-                  className="bg-white p-2 md:p-4 rounded-lg flex-none flex flex-col justify-center mx-1 md:mx-2"
-                >
-                  <p className="text-gray-700 italic text-base md:text-lg mb-1 md:mb-2">{story.text}</p>
-                  <p className="text-gray-900 font-bold text-base md:text-lg">{story.author}</p>
+
+        <div className="flex flex-col items-center justify-center h-full p-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {firstMeetingPoints.map((point, index) => (
+              <div
+                key={index}
+                className={`p-6 rounded-lg shadow-lg ${index === 0 ? 'bg-white text-black' : 'bg-customblue text-white bg-opacity-90'} h-auto`}
+              >
+                <div className="flex flex-col h-full">
+                  <div className="flex-grow">
+                    <h4 className="text-xl font-bold mb-2">{point.title}</h4>
+                    <p className='text-lg mt-2'>{point.description}</p>
+                  </div>
+                  {index === 0 && (
+                    <Link 
+                      to="contact-us" 
+                      smooth={true} 
+                      duration={500} 
+                      className="mt-6 cursor-pointer font-bold inline-flex items-center justify-center gap-3 py-4 px-6 bg-customblue text-white rounded-lg shadow-md hover:bg-custombluehover transition-colors duration-300"
+                    >
+                      {t('callToAction')}
+                    </Link>
+                  )}
                 </div>
-              ))}
-            </div>
-          </Marquee>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </section>

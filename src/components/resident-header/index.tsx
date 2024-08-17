@@ -18,6 +18,7 @@ export function Header(props: IProps) {
 
   const handleBlog = () => {
     navigate('/blog');
+    window.scrollTo(0, 0);
   };
 
   const toggleMenu = () => {
@@ -26,42 +27,37 @@ export function Header(props: IProps) {
 
   return (
     <div className="relative">
-      <header className="fixed left-0 top-0 z-50 flex w-full items-center justify-between border bg-slate-50 px-4 py-4 md:px-12">
-        <ScrollLink to="poster" smooth={true} duration={500} className="flex items-center text-center cursor-pointer hover:opacity-75">
+      <header className="fixed left-0 top-0 z-50 flex w-full items-center justify-between border bg-slate-50 px-4 py-2 md:px-12">
+        <ScrollLink to="poster" smooth={true} duration={500} className="flex font-bold md:flex-col sm:flex-row text-customblue items-center text-center cursor-pointer hover:opacity-75">
           <img 
             src="/images/logo/dv-icon.png" 
             alt="Diverse Logo" 
             className="h-10 w-auto" 
           />
+          <span className=''>DIVERSE VISA</span>
         </ScrollLink>
         <div className="hidden md:flex flex-grow items-center justify-center gap-4">
-        <ScrollLink to="about" smooth={true} duration={500} className="cursor-pointer p-2 rounded-xl hover:text-white hover:bg-customblue transition-colors duration-200">
+        <ScrollLink to="about" smooth={true} duration={500} className="cursor-pointer p-2 rounded-xl hover:text-white hover:bg-customblue transition-colors duration-500">
             {t('about-nav')}
           </ScrollLink>
-          <ScrollLink to="our-programs" smooth={true} duration={500} className="cursor-pointer p-2 rounded-xl hover:text-white hover:bg-customblue transition-colors duration-200">
+          <ScrollLink to="our-programs" smooth={true} duration={500} className="cursor-pointer p-2 rounded-xl hover:text-white hover:bg-custombluehover transition-colors duration-500">
             {t('our-programs-nav')}
           </ScrollLink>
-        <ScrollLink to="services" smooth={true} duration={500} className="cursor-pointer p-2 rounded-xl hover:text-white hover:bg-customblue transition-colors duration-200">
+        <ScrollLink to="services" smooth={true} duration={500} className="cursor-pointer p-2 rounded-xl hover:text-white hover:bg-customblue transition-colors duration-500">
             {t('services-nav')}
           </ScrollLink>
-
-
-          {/* <ScrollLink to="our-network" smooth={true} duration={500} className="cursor-pointer hover:text-white">
-            {t('our-network-nav')}
-          </ScrollLink> */}
-          <ScrollLink to="consultations" smooth={true} duration={500} className="cursor-pointer p-2 rounded-xl hover:text-white hover:bg-customblue transition-colors duration-200">
+          <ScrollLink to="consultations" smooth={true} duration={500} className="cursor-pointer p-2 rounded-xl hover:text-white hover:bg-customblue transition-colors duration-500">
             {t('consultations')}
           </ScrollLink>
-          <ScrollLink to="contact-us" smooth={true} duration={500} className="cursor-pointer p-2 rounded-xl hover:text-white hover:bg-customblue transition-colors duration-200">
+          <ScrollLink to="contact-us" smooth={true} duration={500} className="cursor-pointer p-2 rounded-xl hover:text-white hover:bg-customblue transition-colors duration-500">
             {t('contact-nav')}
           </ScrollLink>
         </div>
         <div className="hidden md:flex items-center gap-4">
           <LanguageSelector />
-          {/* Uncomment if you want to include the blog button */}
-          {/* <Button onClick={handleBlog} className="cursor-pointer bg-customblue hover:bg-custombluehover">
+          <Button onClick={handleBlog} className="cursor-pointer bg-customblue hover:bg-custombluehover">
             {t('blog-nav')}
-          </Button> */}
+          </Button>
         </div>
         <button 
           className="md:hidden flex items-center justify-center p-2 text-slate-700"

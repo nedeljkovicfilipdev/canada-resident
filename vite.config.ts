@@ -6,9 +6,6 @@ import path from 'path';
 export default defineConfig({
   base: './',
   plugins: [
-    svgr({
-      exportAsDefault: true,
-    }),
     react(),
   ],
   resolve: {
