@@ -4,9 +4,9 @@ import ErrorPage from './components/error-page';
 import { getBlogLayout, getDefaultLayout } from './components/layout';
 import Home from './pages/home';
 import Blog from './pages/blog';
-import Login from './pages/login';
+/* import Login from './pages/login';
 import { ResidentPanel } from './components/resident-admin/resident-panel';
-import ProtectedRoute from './protectedRoute';
+import ProtectedRoute from './protectedRoute'; */
 
 export const routerObjects: RouteObject[] = [
 /*   {
