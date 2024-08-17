@@ -1,7 +1,7 @@
 import { Suspense, lazy } from 'react';
 
-const ResidentPoster = lazy(() => import('../resident-poster'));
-const ResidentStoryline = lazy(() => import('../resident-storyline'));
+const PosterAndStoryline = lazy(() => import('../posterstoryline'));
+
 const ResidentAbout = lazy(() => import('../resident-about'));
 const ResidentServices = lazy(() => import('../resident-services'));
 const ResidentPrograms = lazy(() => import('../resident-programs'));
@@ -15,10 +15,7 @@ export const ResidentMain = () => {
   return (
     <div className="flex min-h-screen flex-col">
       <Suspense fallback={<div>Loading...</div>}>
-        <ResidentPoster />
-      </Suspense>
-      <Suspense fallback={<div>Loading...</div>}>
-        <ResidentStoryline />
+        <PosterAndStoryline />
       </Suspense>
       <Suspense fallback={<div>Loading...</div>}>
         <ResidentAbout />

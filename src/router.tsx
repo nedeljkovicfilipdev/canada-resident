@@ -9,14 +9,14 @@ import { ResidentPanel } from './components/resident-admin/resident-panel';
 import ProtectedRoute from './protectedRoute';
 
 export const routerObjects: RouteObject[] = [
-  {
+/*   {
     path: '/panel',
     element: <ProtectedRoute element={getDefaultLayout(<ResidentPanel />)} />,
   },
   {
     path: '/login',
     element: getDefaultLayout(<Login />),
-  },
+  }, */
   {
     path: '/blog',
     element: getBlogLayout(<Blog />),

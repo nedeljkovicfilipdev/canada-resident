@@ -6,10 +6,10 @@ export default function Login() {
   const { t } = useTranslation('translation')
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <title>{t('title')}</title>
       </Helmet>
-      <ResidentLogin />
+      <ResidentLogin /> */}
     </>
   )
 }
