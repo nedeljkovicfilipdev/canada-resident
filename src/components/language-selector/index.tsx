@@ -13,7 +13,7 @@ const getLocaleDisplayName = (locale: string, displayLocale?: string) => {
   return displayName.charAt(0).toLocaleUpperCase() + displayName.slice(1)
 }
 
-const LanguageSelector = () => {
+const LanguageSelector = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
   const { i18n } = useTranslation()
 
   const localesAndNames = useMemo(() => {
@@ -30,17 +30,22 @@ const LanguageSelector = () => {
   const { resolvedLanguage: currentLanguage } = i18n
 
   return (
-    <div className="flex items-end">
+    <div className="relative flex items-end">
       <Popover>
         <PopoverTrigger>
-          <div className="flex items-center gap-1 fill-black text-black">
+          <div className="flex items-center gap-1 fill-black text-black cursor-pointer">
             <Languages size={18} />
             {currentLanguage && getLocaleDisplayName(currentLanguage)}
             <ChevronDown size={12} />
           </div>
         </PopoverTrigger>
 
-        <PopoverContent className="absolute mt-1 max-h-60 w-auto overflow-auto rounded-md bg-white p-0 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+        <PopoverContent 
+          className={cn(
+            "absolute mt-1 max-h-60 w-auto overflow-auto rounded-md bg-white p-0 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm",
+            isMenuOpen ? "bottom-full mt-0" : "top-full mt-1" // Open upwards if menu is open
+          )}
+        >
           {localesAndNames.map(({ locale, name }) => {
             const isSelected = currentLanguage === locale
             return (
@@ -53,7 +58,7 @@ const LanguageSelector = () => {
               </div>
             )
           })}
-          <PopoverArrow />
+          <PopoverArrow className="text-white" />
         </PopoverContent>
       </Popover>
     </div>

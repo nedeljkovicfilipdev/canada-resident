@@ -73,7 +73,7 @@ export const ResidentPrograms = () => {
                 {programs.map((prog, index) => (
                   <div
                     key={index}
-                    className="absolute w-40 h-40 bg-white flex items-center justify-center rounded-full shadow-lg cursor-pointer"
+                    className="absolute w-40 h-40 bg-white hover:bg-gray-100 flex items-center justify-center rounded-full shadow-lg cursor-pointer"
                     style={{
                       transform: `rotate(${index * 45}deg) translate(18rem) rotate(-${index * 45}deg)` // Adjusted translation for the image
                     }}
@@ -87,6 +87,9 @@ export const ResidentPrograms = () => {
             </div>
             {/* Card layout for small screens */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 lg:hidden">
+            <div className="absolute top-0 left-0 w-full text-center bg-opacity-70 bg-customblue shadow-lg p-4">
+              <h2 className="text-2xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-white">{t('ourPrograms')}</h2>
+            </div>
               {programs.map((prog, index) => (
                 <div
                   key={index}

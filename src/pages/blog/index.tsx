@@ -7,7 +7,7 @@ export default function Blog() {
   return (
     <>
       <Helmet>
-        <title>{t('title')}</title>
+        <title>Diverse Visa - Expert Immigration Services for Canada and Beyond</title>
       </Helmet>
       <ResidentBlog />
     </>

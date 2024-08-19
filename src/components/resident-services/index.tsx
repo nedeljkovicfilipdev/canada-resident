@@ -6,7 +6,7 @@ import { useSpring, animated } from '@react-spring/web';
 export const Card: React.FC<{ title: string, content: string }> = ({ title, content }) => {
 
   return (
-  <div className="w-full h-auto p-8 rounded-lg bg-customblue shadow-md flex flex-col justify-center hover:bg-customblue1 hover:cursor-pointer tracking-tighter">
+  <div className="w-full h-auto p-8 rounded-lg bg-customblue shadow-md flex flex-col justify-center hover:bg-customblue1 hover:cursor-default tracking-tighter">
     <h3 className="mb-6 text-2xl sm:text-2xl xl:text-3xl font-bold text-white">{title}</h3>
     <p className="text-xl text-gray-100 text-justify">{content}</p>
   </div>
