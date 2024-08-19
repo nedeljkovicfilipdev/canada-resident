@@ -19,7 +19,7 @@ const ResidentPoster = () => {
               {t('subHeadline')}
             </h2>
           </div>
-          <div className="md:w-2/7 bg-white bg-opacity-90 p-6 text-black rounded-2xl shadow-lg text-left">
+          <div className="md:w-2/7 bg-white bg-opacity-95 p-6 text-black rounded-2xl shadow-lg text-left">
             <EmailForm />
           </div>
         </div>
